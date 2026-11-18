@@ -24,6 +24,10 @@ When authoring a slide/scene, first classify its pedagogical intent:
 | `INTENT_3D_SPATIAL` | Multi-dim physics & robotic kinematics | `CyberAcademicDashboardLayout` | `render_pyvista_streamlines_vector_field` |
 | `INTENT_OPTIMIZE` | Non-convex loss landscape & optimizer | `CyberAcademicDashboardLayout` | `render_loss_landscape_3d` / `render_optimization_contour_paths` |
 | `INTENT_ARCHITECTURE` | Internal system wiring & dataflow | `render_triptych_pipeline_layout` | `render_dag_workflow_statechart` |
+| `INTENT_CHEMISTRY` | Molecular skeletal reaction & catalysis | `TopFormulaBottomDynamicLayout` | `render_molecule_reaction_scheme` |
+| `INTENT_CELESTIAL` | CR3BP rotating frame & orbital balance | `CyberAcademicDashboardLayout` | `render_synodic_lagrange_orbit` |
+| `INTENT_RF_MICROWAVE` | Transmission line impedance & eye mask | `CyberAcademicDashboardLayout` | `render_smith_eye_pair` |
+| `INTENT_PARTICLE_PHYSICS` | Perturbative quantum field interactions | `TopFormulaBottomDynamicLayout` | `render_feynman_diagram_interaction` |
 | `INTENT_CODE_RUNTIME` | Implementation vs memory state | `DualInspectionLayout` | `render_dual_code_inspector` |
 | `INTENT_BENCHMARK` | Empirical proof, convergence & ablation | `render_quad_comparison_layout` | `render_convergence_band_plot` / `render_multi_metric_radar` |
 
@@ -56,7 +60,13 @@ Every visual component is purely data-driven, accepting structured JSON props.
 - **`render_genomic_sequence_ribbon`**: Information-entropy sequence logo (bits) paired with annotated linear open reading frame tracks.
 - **`render_dag_workflow_statechart`**: Distributed DAG pipeline with lifecycle states (`queued`, `running`, `success`, `failed`).
 
-### 2.6 Multi-Pane Cyber-Academic Layout Engines
+### 2.6 Chemistry, Celestial Mechanics, Microwave & High-Energy Physics (`RDKit` / `Astropy` / `scikit-rf` / `TikZ-Feynman`)
+- **`render_molecule_reaction_scheme`**: 2D Kekule 30°/90° skeletal formulas, wedge/dash stereochemistry, CPK atom colors, reaction conditions & yield.
+- **`render_synodic_lagrange_orbit`**: Circular Restricted Three-Body Problem (CR3BP) synodic rotating frame, L1–L5 Lagrange equilibrium points & Lyapunov halo orbit.
+- **`render_smith_eye_pair`**: scikit-rf Smith chart with constant resistance/reactance circles & reflection coefficient paired with 2-UI eye diagram mask.
+- **`render_feynman_diagram_interaction`**: TikZ-Feynman QED s-channel fermion lines, virtual photon transverse sinusoidal propagator wave & interaction vertices.
+
+### 2.7 Multi-Pane Cyber-Academic Layout Engines
 - **`render_premium_hero_cover`**: Cinematic widescreen title cover with glowing gradients and module badges.
 - **`render_cyber_academic_dashboard_layout`**: Split analytical dashboard (3D/dynamic visual + deduction card + telemetry bus).
 - **`render_triptych_pipeline_layout`**: 3-stage modular pipeline layout.

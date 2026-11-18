@@ -26,9 +26,13 @@ from .visual_studio import (
     render_graph_network_topology,
     render_genomic_sequence_ribbon,
     render_dag_workflow_statechart,
+    render_molecule_reaction_scheme,
+    render_synodic_lagrange_orbit,
+    render_smith_eye_pair,
+    render_feynman_diagram_interaction,
 )
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __all__ = [
     "render_premium_hero_cover",
     "render_loss_landscape_3d",
@@ -52,4 +56,8 @@ __all__ = [
     "render_graph_network_topology",
     "render_genomic_sequence_ribbon",
     "render_dag_workflow_statechart",
+    "render_molecule_reaction_scheme",
+    "render_synodic_lagrange_orbit",
+    "render_smith_eye_pair",
+    "render_feynman_diagram_interaction",
 ]

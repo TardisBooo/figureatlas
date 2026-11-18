@@ -214,6 +214,22 @@ def generate_assets():
         "22_dag_workflow_statechart.html": vs.render_dag_workflow_statechart(
             title="DISTRIBUTED WORKFLOW DAG PIPELINE",
             subtitle="Layered Task Lifecycle Execution States with Orthogonal Routing"
+        ),
+        "23_molecule_reaction.html": vs.render_molecule_reaction_scheme(
+            title="RDKIT CHEMICAL REACTION & MOLECULAR TOPOLOGY",
+            subtitle="2D Kekule Skeletal Bonds with Stereochemical Wedges and Reagent Catalysis"
+        ),
+        "24_synodic_lagrange_orbit.html": vs.render_synodic_lagrange_orbit(
+            title="CR3BP SYNODIC ORBITS & LAGRANGE POINTS",
+            subtitle="Rotating Frame with Jacobi Energy Contours, L1-L5 Points & Lyapunov Halo Orbit"
+        ),
+        "25_smith_eye_pair.html": vs.render_smith_eye_pair(
+            title="MICROWAVE SMITH CHART & SERIAL EYE DIAGRAM",
+            subtitle="Complex S11 Reflection Trajectory on Unit Circle with 2-UI Serial Eye Mask"
+        ),
+        "26_feynman_diagram.html": vs.render_feynman_diagram_interaction(
+            title="QED FEYNMAN PARTICLE INTERACTION",
+            subtitle="s-Channel Electron-Positron Annihilation via Virtual Gauge Boson Propagator"
         )
     }
 

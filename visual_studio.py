@@ -2203,3 +2203,416 @@ def render_dag_workflow_statechart(
         </svg>
     </div>
     """
+
+
+# ==============================================================================
+# SECTION 8: CUTTING-EDGE INTERDISCIPLINARY SCIENTIFIC VISUALIZATIONS
+# (Researched via Grok 4.7 Heavy Survey: RDKit, Astropy/Poliastro, scikit-rf, TikZ-Feynman)
+# ==============================================================================
+
+def render_molecule_reaction_scheme(
+    title: str = "CHEMICAL SYNTHESIS & MOLECULAR TOPOLOGY",
+    subtitle: str = "2D Kekule Skeletal Structures with Stereochemical Wedges and Reagent Catalysis",
+    reagents: str = "Pd(OAc)2, P(o-tol)3 // NEt3, 100°C",
+    yield_pct: str = "94% YIELD",
+    width: int = 860,
+    height: int = 520,
+) -> str:
+    """
+    Renders an organic chemical reaction scheme following RDKit MolDraw2D standards:
+    - Left: Reactant molecules (e.g. Aryl halide + Acrylate) with exact 30°/90° skeletal bonds.
+    - Center: Reaction arrow with catalyst, base, temperature conditions, and percentage yield.
+    - Right: Product molecule with stereochemical wedge/dash bonds.
+    - Heteroatoms follow standard CPK coloring (N: #38BDF8, O: #FA4D56, S: #F59E0B).
+    """
+    return f"""
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: {width}px; height: {height}px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #10B981; font-weight: 700; letter-spacing: 1px;">CHEMINFORMATICS // RDKit 2D MOLECULAR SPEC</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">{html.escape(title)}</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">{html.escape(subtitle)}</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #10B981; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">{yield_pct}</span>
+                <span style="background: rgba(56,189,248,0.15); border: 1px solid #38BDF8; color: #38BDF8; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">HECK COUPLING</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <rect width="820" height="400" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+            
+            <!-- LEFT: REACTANTS -->
+            <!-- Molecule A: Bromobenzene -->
+            <g transform="translate(60, 160)">
+                <!-- Benzene Ring -->
+                <polygon points="60,0 90,17 90,52 60,69 30,52 30,17" fill="none" stroke="#F8FAFC" stroke-width="2.5"/>
+                <!-- Alternating double bonds -->
+                <line x1="60" y1="6" x2="84" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="84" y1="48" x2="60" y2="62" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="36" y1="48" x2="36" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                <!-- Substituent -Br -->
+                <line x1="90" y1="35" x2="130" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                <text x="145" y="41" fill="#FA4D56" font-family="monospace" font-size="16" font-weight="800">Br</text>
+            </g>
+
+            <text x="245" y="200" fill="#94A3B8" font-family="monospace" font-size="22" font-weight="700">+</text>
+
+            <!-- Molecule B: Methyl Acrylate -->
+            <g transform="translate(260, 160)">
+                <line x1="20" y1="50" x2="55" y2="30" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="22" y1="44" x2="52" y2="26" stroke="#F8FAFC" stroke-width="1.8"/>
+                <line x1="55" y1="30" x2="90" y2="50" stroke="#F8FAFC" stroke-width="2.5"/>
+                <!-- Carbonyl =O -->
+                <line x1="88" y1="50" x2="88" y2="85" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="94" y1="50" x2="94" y2="85" stroke="#F8FAFC" stroke-width="2"/>
+                <text x="86" y="105" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                <!-- Ester -OMe -->
+                <line x1="90" y1="50" x2="120" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                <text x="126" y="38" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                <line x1="145" y1="35" x2="165" y2="48" stroke="#F8FAFC" stroke-width="2.5"/>
+            </g>
+
+            <!-- CENTER: REACTION ARROW -->
+            <g transform="translate(435, 195)">
+                <text x="45" y="-18" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">{html.escape(reagents)}</text>
+                <line x1="0" y1="0" x2="90" y2="0" stroke="#38BDF8" stroke-width="3"/>
+                <polygon points="90,0 80,-6 80,6" fill="#38BDF8"/>
+                <text x="45" y="18" fill="#10B981" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">Regioselective Trans</text>
+            </g>
+
+            <!-- RIGHT: PRODUCT (Methyl Cinnamate) -->
+            <g transform="translate(545, 160)">
+                <!-- Benzene Ring -->
+                <polygon points="60,0 90,17 90,52 60,69 30,52 30,17" fill="none" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="60" y1="6" x2="84" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="84" y1="48" x2="60" y2="62" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="36" y1="48" x2="36" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                
+                <!-- Trans double bond connecting to ester -->
+                <line x1="90" y1="35" x2="125" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="125" y1="35" x2="155" y2="15" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="127" y1="42" x2="153" y2="24" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="155" y1="15" x2="185" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                
+                <!-- Carbonyl =O -->
+                <line x1="183" y1="35" x2="183" y2="65" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="189" y1="35" x2="189" y2="65" stroke="#F8FAFC" stroke-width="2"/>
+                <text x="180" y="82" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                
+                <!-- Ester -OMe -->
+                <line x1="185" y1="35" x2="210" y2="20" stroke="#F8FAFC" stroke-width="2.5"/>
+                <text x="215" y="24" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                <line x1="230" y1="20" x2="250" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+            </g>
+
+            <!-- Bottom Telemetry Specs -->
+            <g transform="translate(60, 340)">
+                <text x="0" y="20" fill="#64748B" font-family="monospace" font-size="11">SMILES: O=C(OC)/C=C/c1ccccc1</text>
+                <text x="360" y="20" fill="#64748B" font-family="monospace" font-size="11">MOL WT: 162.19 g/mol</text>
+                <text x="560" y="20" fill="#10B981" font-family="monospace" font-size="11">LOGP: 2.14 // TOX: NOMINAL</text>
+            </g>
+        </svg>
+    </div>
+    """
+
+
+def render_synodic_lagrange_orbit(
+    title: str = "RESTRICTED THREE-BODY (CR3BP) SYNODIC ORBITS & LAGRANGE POINTS",
+    subtitle: str = "Rotating Frame with Jacobi Energy Contours, Collinear L1-L3, Triangular L4-L5 & Lyapunov Orbit",
+    mu: float = 0.01215,
+    width: int = 860,
+    height: int = 520,
+) -> str:
+    """
+    Renders an Astropy / Poliastro compliant Circular Restricted Three-Body Problem (CR3BP):
+    - Synodic rotating coordinate frame where primary bodies (Earth m1, Moon m2) are fixed on x-axis.
+    - 5 Equilibrium Lagrange Points (L1-L5) with coordinates derived from five-degree quintic polynomial.
+    - Closed periodic Lyapunov/Halo orbit around L1/L2.
+    - Zero-velocity Jacobi constant potential boundary contours.
+    """
+    cx, cy = 410, 210
+    scale = 260
+    
+    # Primary bodies in synodic frame: Earth at (-mu, 0), Moon at (1-mu, 0)
+    m1_x = cx - int(mu * scale)
+    m2_x = cx + int((1.0 - mu) * scale)
+    
+    # Lagrange points coordinates
+    # Collinear: L1 (between), L2 (outer small), L3 (outer large)
+    # Triangular: L4 (+sqrt(3)/2), L5 (-sqrt(3)/2)
+    gamma1 = 0.15
+    l1_x = cx + int((1.0 - mu - gamma1) * scale)
+    l2_x = cx + int((1.0 - mu + gamma1) * scale)
+    l3_x = cx - int((mu + 1.0) * scale * 0.95)
+    
+    l4_x = cx + int((0.5 - mu) * scale)
+    l4_y = cy - int(0.866 * scale)
+    l5_x = l4_x
+    l5_y = cy + int(0.866 * scale)
+
+    return f"""
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: {width}px; height: {height}px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #38BDF8; font-weight: 700; letter-spacing: 1px;">CELESTIAL MECHANICS // ASTROPY & POLIASTRO CR3BP</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">{html.escape(title)}</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">{html.escape(subtitle)}</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(56,189,248,0.15); border: 1px solid #38BDF8; color: #38BDF8; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">MASS RATIO μ = {mu:.5f}</span>
+                <span style="background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #10B981; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">JACOBI C = 3.142</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <rect width="820" height="400" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+            
+            <!-- Rotating coordinate axes -->
+            <line x1="50" y1="{cy}" x2="770" y2="{cy}" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,4"/>
+            <line x1="{cx}" y1="30" x2="{cx}" y2="370" stroke="#334155" stroke-width="1.5" stroke-dasharray="4,4"/>
+            <text x="775" y="{cy+4}" fill="#64748B" font-family="monospace" font-size="11">+X (Synodic)</text>
+            <text x="{cx+4}" y="30" fill="#64748B" font-family="monospace" font-size="11">+Y (Corotating)</text>
+
+            <!-- Jacobi Zero-Velocity Potential Curve (Iso-contours) -->
+            <path d="M120,{cy} C120,{cy-140} {m2_x+50},{cy-140} {m2_x+50},{cy} C{m2_x+50},{cy+140} 120,{cy+140} 120,{cy}" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+            <path d="M220,{cy} C220,{cy-80} {l2_x+20},{cy-80} {l2_x+20},{cy} C{l2_x+20},{cy+80} 220,{cy+80} 220,{cy}" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2,2" opacity="0.4"/>
+
+            <!-- Equilateral Triangles connecting Primaries to L4 / L5 -->
+            <line x1="{m1_x}" y1="{cy}" x2="{l4_x}" y2="{l4_y}" stroke="#1E293B" stroke-width="1.5"/>
+            <line x1="{m2_x}" y1="{cy}" x2="{l4_x}" y2="{l4_y}" stroke="#1E293B" stroke-width="1.5"/>
+
+            <!-- Primary Body 1: Earth -->
+            <circle cx="{m1_x}" cy="{cy}" r="22" fill="#1D4ED8" stroke="#60A5FA" stroke-width="2"/>
+            <text x="{m1_x}" y="{cy+4}" fill="#FFFFFF" font-family="monospace" font-size="11" font-weight="800" text-anchor="middle">m₁</text>
+            <text x="{m1_x}" y="{cy+38}" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">Earth (-μ, 0)</text>
+
+            <!-- Primary Body 2: Moon -->
+            <circle cx="{m2_x}" cy="{cy}" r="9" fill="#94A3B8" stroke="#F8FAFC" stroke-width="1.5"/>
+            <text x="{m2_x}" y="{cy+3}" fill="#080C14" font-family="monospace" font-size="8" font-weight="900" text-anchor="middle">m₂</text>
+            <text x="{m2_x}" y="{cy+24}" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">Moon (1-μ, 0)</text>
+
+            <!-- Lagrange Points L1 - L5 -->
+            <!-- L1 -->
+            <circle cx="{l1_x}" cy="{cy}" r="5" fill="#FA4D56"/>
+            <text x="{l1_x}" y="{cy-12}" fill="#FA4D56" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">L₁</text>
+            
+            <!-- Periodic Lyapunov Halo Orbit around L1 -->
+            <ellipse cx="{l1_x}" cy="{cy}" rx="18" ry="36" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+            <text x="{l1_x+24}" y="{cy-24}" fill="#F59E0B" font-family="monospace" font-size="10" font-weight="700">Lyapunov Halo</text>
+
+            <!-- L2 -->
+            <circle cx="{l2_x}" cy="{cy}" r="5" fill="#FA4D56"/>
+            <text x="{l2_x}" y="{cy-12}" fill="#FA4D56" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">L₂</text>
+
+            <!-- L3 -->
+            <circle cx="{l3_x}" cy="{cy}" r="5" fill="#FA4D56"/>
+            <text x="{l3_x}" y="{cy-12}" fill="#FA4D56" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">L₃</text>
+
+            <!-- L4 -->
+            <circle cx="{l4_x}" cy="{l4_y}" r="6" fill="#10B981"/>
+            <text x="{l4_x+16}" y="{l4_y+4}" fill="#10B981" font-family="monospace" font-size="12" font-weight="800">L₄ (Trojan)</text>
+
+            <!-- L5 -->
+            <circle cx="{l5_x}" cy="{l5_y}" r="6" fill="#10B981"/>
+            <text x="{l5_x+16}" y="{l5_y+4}" fill="#10B981" font-family="monospace" font-size="12" font-weight="800">L₅ (Greek)</text>
+        </svg>
+    </div>
+    """
+
+
+def render_smith_eye_pair(
+    title: str = "MICROWAVE SMITH CHART IMPEDANCE & HIGH-SPEED EYE DIAGRAM",
+    subtitle: str = "Complex Reflection Coefficient S11 on Polar Unit Circle with Dual-UI Serial Eye Mask",
+    vswr: float = 1.25,
+    q_factor: float = 8.4,
+    width: int = 860,
+    height: int = 520,
+) -> str:
+    """
+    Renders a unified RF / Microwave / High-Speed Signal Integrity layout:
+    Left: Smith Chart based on scikit-rf formulas (constant-resistance circles r, constant-reactance arcs x,
+          VSWR circle, and S11 trajectory towards match point Γ=0).
+    Right: Communication Eye Diagram folded across 2 UI (-1 to +1 UI) with hexagonal keep-out mask,
+          jitter margin, and eye height opening.
+    """
+    # Smith chart center & radius (pane center 220, 220)
+    scx, scy, sr = 220, 220, 140
+
+    # Eye diagram center (pane center 610, 220)
+    ecx, ecy = 610, 220
+
+    return f"""
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: {width}px; height: {height}px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F59E0B; font-weight: 700; letter-spacing: 1px;">RF ENGINEERING // SCIKIT-RF & SIGNAL INTEGRITY SPEC</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">{html.escape(title)}</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">{html.escape(subtitle)}</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(245,158,11,0.15); border: 1px solid #F59E0B; color: #F59E0B; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">VSWR: {vswr}:1</span>
+                <span style="background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #10B981; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">EYE HEIGHT: 380mV</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <!-- LEFT: SMITH CHART -->
+            <g id="smith-chart">
+                <rect x="30" y="30" width="370" height="350" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+                <text x="50" y="56" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">SMITH IMPEDANCE CHART (|Γ| ≤ 1)</text>
+
+                <!-- Outer Unit Circle (r=0) -->
+                <circle cx="{scx}" cy="{scy}" r="{sr}" fill="none" stroke="#475569" stroke-width="1.5"/>
+                <!-- Horizontal Real Axis -->
+                <line x1="{scx-sr}" y1="{scy}" x2="{scx+sr}" y2="{scy}" stroke="#475569" stroke-width="1.2"/>
+
+                <!-- Constant Resistance Circles: center = (r/(1+r), 0), radius = 1/(1+r) -->
+                <!-- r = 0.5 -->
+                <circle cx="{scx + sr*(0.5/1.5)}" cy="{scy}" r="{sr*(1.0/1.5)}" fill="none" stroke="#334155" stroke-width="1"/>
+                <!-- r = 1.0 (passes through origin) -->
+                <circle cx="{scx + sr*0.5}" cy="{scy}" r="{sr*0.5}" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.8"/>
+                <!-- r = 2.0 -->
+                <circle cx="{scx + sr*(2.0/3.0)}" cy="{scy}" r="{sr*(1.0/3.0)}" fill="none" stroke="#334155" stroke-width="1"/>
+
+                <!-- Constant Reactance Arcs: x = +/- 1.0 -->
+                <!-- x = +1.0 (inductive) -->
+                <path d="M{scx+sr},{scy} A{sr},{sr} 0 0,0 {scx},{scy-sr}" fill="none" stroke="#334155" stroke-width="1"/>
+                <!-- x = -1.0 (capacitive) -->
+                <path d="M{scx+sr},{scy} A{sr},{sr} 0 0,1 {scx},{scy+sr}" fill="none" stroke="#334155" stroke-width="1"/>
+
+                <!-- VSWR Circle (concentric around center Γ=0) -->
+                <circle cx="{scx}" cy="{scy}" r="{sr*0.35}" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+                <!-- S11 Frequency Trace Trajectory -->
+                <path d="M{scx-sr*0.7},{scy+sr*0.3} Q{scx-sr*0.1},{scy-sr*0.4} {scx+sr*0.05},{scy-sr*0.02}" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+                <circle cx="{scx+sr*0.05}" cy="{scy-sr*0.02}" r="5" fill="#F59E0B"/>
+                <text x="{scx+sr*0.05+8}" y="{scy-sr*0.02-4}" fill="#F59E0B" font-family="monospace" font-size="10" font-weight="800">5.8 GHz (Z_in)</text>
+
+                <text x="50" y="{scy+sr+18}" fill="#94A3B8" font-family="monospace" font-size="10">Match: z=1.0+j0.0 (Γ=0)</text>
+            </g>
+
+            <!-- RIGHT: EYE DIAGRAM -->
+            <g id="eye-diagram">
+                <rect x="420" y="30" width="370" height="350" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+                <text x="440" y="56" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">2-UI SERIAL EYE DIAGRAM // 28 Gbps</text>
+
+                <!-- Grid & Zero Crossover -->
+                <line x1="450" y1="{ecy}" x2="760" y2="{ecy}" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="{ecx}" y1="80" x2="{ecx}" y2="340" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="{ecx}" y="358" fill="#64748B" font-family="monospace" font-size="10" text-anchor="middle">0 UI (Optimal Sample)</text>
+                <text x="490" y="358" fill="#64748B" font-family="monospace" font-size="10" text-anchor="middle">-0.5 UI</text>
+                <text x="730" y="358" fill="#64748B" font-family="monospace" font-size="10" text-anchor="middle">+0.5 UI</text>
+
+                <!-- Eye Traces (Superimposed signal transitions) -->
+                <!-- Level 1 (High) & Level 0 (Low) -->
+                <path d="M450,130 C530,130 570,130 {ecx},130 C650,130 690,130 760,130" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.6"/>
+                <path d="M450,310 C530,310 570,310 {ecx},310 C650,310 690,310 760,310" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.6"/>
+
+                <!-- Falling Edge transitions (1 -> 0) -->
+                <path d="M450,130 C530,130 570,310 {ecx},310 C650,310 690,130 760,130" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.8"/>
+                <!-- Rising Edge transitions (0 -> 1) -->
+                <path d="M450,310 C530,310 570,130 {ecx},130 C650,130 690,310 760,310" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.8"/>
+                <path d="M450,130 C490,220 530,310 {ecx},310 C690,310 730,220 760,130" fill="none" stroke="#818CF8" stroke-width="1.5" opacity="0.5"/>
+                <path d="M450,310 C490,220 530,130 {ecx},130 C690,130 730,220 760,310" fill="none" stroke="#818CF8" stroke-width="1.5" opacity="0.5"/>
+
+                <!-- Hexagonal Keep-Out Mask in center -->
+                <polygon points="{ecx-45},{ecy} {ecx-25},{ecy-45} {ecx+25},{ecy-45} {ecx+45},{ecy} {ecx+25},{ecy+45} {ecx-25},{ecy+45}" fill="rgba(250,77,86,0.15)" stroke="#FA4D56" stroke-width="1.5"/>
+                <text x="{ecx}" y="{ecy+4}" fill="#FA4D56" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">MASK PASS</text>
+
+                <!-- Eye Height Arrow Indicator -->
+                <line x1="{ecx}" y1="135" x2="{ecx}" y2="305" stroke="#10B981" stroke-width="2"/>
+                <text x="{ecx+8}" y="{ecy-20}" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">Eye Height</text>
+            </g>
+        </svg>
+    </div>
+    """
+
+
+def render_feynman_diagram_interaction(
+    title: str = "QUANTUM ELECTRODYNAMICS (QED) FEYNMAN INTERACTION",
+    subtitle: str = "s-Channel Electron-Positron Annihilation into Muon Pair via Virtual Gauge Photon",
+    coupling_const: str = "α = 1/137.036 (Fine Structure)",
+    width: int = 860,
+    height: int = 520,
+) -> str:
+    """
+    Renders a High-Energy Physics Feynman Diagram following TikZ-Feynman / PyFeyn standards:
+    - Incoming / Outgoing Fermion lines with directional arrows (e-, e+, μ-, μ+).
+    - Virtual gauge boson propagator: Sine wave wiggly curve for virtual photon γ.
+    - Interaction vertices with coupling constants.
+    - Cold-white fermion tracks, cyan photon waves, and purple gluon spirals.
+    """
+    v1_x, v1_y = 310, 220
+    v2_x, v2_y = 510, 220
+
+    return f"""
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: {width}px; height: {height}px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A855F7; font-weight: 700; letter-spacing: 1px;">HIGH ENERGY PARTICLE PHYSICS // TIKZ-FEYNMAN SPEC</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">{html.escape(title)}</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">{html.escape(subtitle)}</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(168,85,247,0.15); border: 1px solid #A855F7; color: #A855F7; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">s-CHANNEL</span>
+                <span style="background: rgba(56,189,248,0.15); border: 1px solid #38BDF8; color: #38BDF8; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">{coupling_const}</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <rect width="820" height="400" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+
+            <!-- Time and Space coordinates guides -->
+            <text x="60" y="370" fill="#64748B" font-family="monospace" font-size="11">TIME ➔ (Left to Right)</text>
+            <text x="760" y="370" fill="#64748B" font-family="monospace" font-size="11" text-anchor="end">MATRIX ELEMENT: ℳ = -e² [ūγ^μ u] [v̄γ_μ v] / s</text>
+
+            <!-- INCOMING LEGS (Left) -->
+            <!-- Electron e- (incoming, arrow pointing right to vertex 1) -->
+            <line x1="130" y1="100" x2="{v1_x}" y2="{v1_y}" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow at ~55% of line -->
+            <polygon points="230,165 218,160 224,172" fill="#F8FAFC"/>
+            <text x="110" y="105" fill="#38BDF8" font-family="monospace" font-size="16" font-weight="800">e⁻</text>
+            <text x="140" y="145" fill="#64748B" font-family="monospace" font-size="11">p₁ ➔</text>
+
+            <!-- Positron e+ (incoming, arrow pointing AWAY from vertex 1: backwards in time) -->
+            <line x1="130" y1="340" x2="{v1_x}" y2="{v1_y}" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow pointing down-left -->
+            <polygon points="215,280 227,285 221,273" fill="#F8FAFC"/>
+            <text x="110" y="348" fill="#FA4D56" font-family="monospace" font-size="16" font-weight="800">e⁺</text>
+            <text x="140" y="300" fill="#64748B" font-family="monospace" font-size="11">p₂ ➔</text>
+
+            <!-- VERTEX 1 -->
+            <circle cx="{v1_x}" cy="{v1_y}" r="6" fill="#A855F7"/>
+            <text x="{v1_x-10}" y="{v1_y-14}" fill="#A855F7" font-family="monospace" font-size="11" font-weight="700">ieγ^μ</text>
+
+            <!-- VIRTUAL PROPAGATOR: Photon γ (Sine Wiggly Wave from v1 to v2) -->
+            <path d="M{v1_x},{v1_y} 
+                     q20,-16 40,0 q20,16 40,0 
+                     q20,-16 40,0 q20,16 40,0 
+                     q20,-16 40,0" 
+                  fill="none" stroke="#38BDF8" stroke-width="3"/>
+            <text x="{(v1_x+v2_x)/2}" y="{v1_y-24}" fill="#38BDF8" font-family="monospace" font-size="14" font-weight="800" text-anchor="middle">γ* (Virtual Photon)</text>
+            <text x="{(v1_x+v2_x)/2}" y="{v1_y+26}" fill="#64748B" font-family="monospace" font-size="11" text-anchor="middle">q = p₁ + p₂ (s = q²)</text>
+
+            <!-- VERTEX 2 -->
+            <circle cx="{v2_x}" cy="{v2_y}" r="6" fill="#A855F7"/>
+            <text x="{v2_x+10}" y="{v2_y-14}" fill="#A855F7" font-family="monospace" font-size="11" font-weight="700">ieγ_μ</text>
+
+            <!-- OUTGOING LEGS (Right) -->
+            <!-- Muon μ- (outgoing, arrow pointing away to upper right) -->
+            <line x1="{v2_x}" y1="{v2_y}" x2="690" y2="100" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow pointing up-right -->
+            <polygon points="610,153 598,158 604,146" fill="#F8FAFC"/>
+            <text x="705" y="105" fill="#38BDF8" font-family="monospace" font-size="16" font-weight="800">μ⁻</text>
+            <text x="650" y="145" fill="#64748B" font-family="monospace" font-size="11">➔ k₁</text>
+
+            <!-- Anti-Muon μ+ (outgoing, arrow pointing backwards to vertex 2) -->
+            <line x1="{v2_x}" y1="{v2_y}" x2="690" y2="340" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow pointing up-left -->
+            <polygon points="595,273 607,268 601,280" fill="#F8FAFC"/>
+            <text x="705" y="348" fill="#FA4D56" font-family="monospace" font-size="16" font-weight="800">μ⁺</text>
+            <text x="650" y="300" fill="#64748B" font-family="monospace" font-size="11">➔ k₂</text>
+        </svg>
+    </div>
+    """

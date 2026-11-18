@@ -377,3 +377,66 @@ render_dag_workflow_statechart(
 )
 ```
 
+---
+
+### 23. `render_molecule_reaction_scheme`
+*RDKit 2D chemical structure & reaction scheme: 30°/90° skeletal bonds, stereochemical wedges, CPK heteroatom colors, and catalysis conditions.*
+
+![Molecule Reaction Scheme](assets/gallery/23_molecule_reaction.png)
+
+```python
+render_molecule_reaction_scheme(
+    title="RDKIT CHEMICAL REACTION & MOLECULAR TOPOLOGY",
+    subtitle="2D Kekule Skeletal Bonds with Stereochemical Wedges and Reagent Catalysis",
+    reagents="Pd(OAc)2, P(o-tol)3 // NEt3, 100°C",
+    yield_pct="94% YIELD"
+)
+```
+
+---
+
+### 24. `render_synodic_lagrange_orbit`
+*Astropy/Poliastro CR3BP synodic rotating frame: primary bodies at $(-\mu, 0)$ and $(1-\mu, 0)$, L1-L5 equilibrium Lagrange points, Jacobi zero-velocity curves, and periodic Lyapunov halo orbit.*
+
+![Synodic Lagrange Orbit](assets/gallery/24_synodic_lagrange_orbit.png)
+
+```python
+render_synodic_lagrange_orbit(
+    title="CR3BP SYNODIC ORBITS & LAGRANGE POINTS",
+    subtitle="Rotating Frame with Jacobi Energy Contours, L1-L5 Points & Lyapunov Halo Orbit",
+    mu=0.01215
+)
+```
+
+---
+
+### 25. `render_smith_eye_pair`
+*RF & microwave engineering: scikit-rf Smith Chart with constant-resistance circles, constant-reactance arcs, VSWR circle, paired with a 2-UI communication serial Eye Diagram and hexagonal keep-out mask.*
+
+![Smith Eye Pair](assets/gallery/25_smith_eye_pair.png)
+
+```python
+render_smith_eye_pair(
+    title="MICROWAVE SMITH CHART & SERIAL EYE DIAGRAM",
+    subtitle="Complex S11 Reflection Trajectory on Unit Circle with 2-UI Serial Eye Mask",
+    vswr=1.25,
+    q_factor=8.4
+)
+```
+
+---
+
+### 26. `render_feynman_diagram_interaction`
+*High-energy particle physics: TikZ-Feynman / PyFeyn QED s-channel electron-positron annihilation via virtual gauge photon propagator into a muon pair.*
+
+![Feynman Diagram](assets/gallery/26_feynman_diagram.png)
+
+```python
+render_feynman_diagram_interaction(
+    title="QED FEYNMAN PARTICLE INTERACTION",
+    subtitle="s-Channel Electron-Positron Annihilation via Virtual Gauge Boson Propagator",
+    coupling_const="α = 1/137.036 (Fine Structure)"
+)
+```
+
+
