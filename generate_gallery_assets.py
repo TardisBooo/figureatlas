@@ -155,6 +155,40 @@ def generate_assets():
                 {"num": "STAGE 03", "name": "Torque Servo Loop", "tag": "IMPEDANCE CONTROL", "desc": "Hard-realtime joint motor current controller executing compliance reflexes.", "metrics": {"LOOP": "1000Hz", "BANDWIDTH": "1200 rad/s"}, "color": "#10B981"}
             ],
             interconnect_label="SYNCHRONOUS DATA BUS // 500Hz"
+        ),
+        "13_loss_landscape_3d.html": vs.render_loss_landscape_3d(
+            title="3D PARAMETRIC LOSS MANIFOLD",
+            subtitle="Non-Convex Energy Surface with Saddle-Point Trajectories",
+            contour_levels=14
+        ),
+        "14_teachable_reservoir_valve.html": vs.render_teachable_reservoir_valve(
+            title="HYDRAULIC RESERVOIR & GATED THROTTLE",
+            subtitle="Physical Intuition for Gradient Accumulation & Flow Dissipation",
+            reservoir_level_pct=68,
+            valve_aperture_pct=42
+        ),
+        "15_top_formula_bottom_dynamic.html": vs.render_top_formula_bottom_dynamic_layout(
+            scene_kicker="AXIOM // EQUATIONS OF MOTION",
+            scene_title="Lagrangian Mechanics Formulation",
+            formula_latex=r"\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) - \frac{\partial \mathcal{L}}{\partial q_i} = \tau_i",
+            formula_explanation="The Euler-Lagrange equations establish the fundamental connection between variational stationary action and robotic generalized coordinates.",
+            dynamic_component_html=vs.render_matrix_transformation_2d(title="GENERALIZED COORDINATE MAPPING", subtitle="Tangent Space Basis Deformation")
+        ),
+        "16_quad_comparison_matrix.html": vs.render_quad_comparison_layout(
+            scene_kicker="ABLATION // EMPIRICAL BENCHMARK",
+            scene_title="Ablation Analysis Across System Architectures",
+            quad_cards=[
+                {"title": "Baseline Rigid", "badge": "CONFIG A", "desc": "Fixed-gain classical PID with rigid link assumption.", "stat_val": "24.2 ms", "stat_label": "TRACKING ERROR", "color": "#64748B"},
+                {"title": "Admittance Hybrid", "badge": "CONFIG B", "desc": "Outer admittance loop with direct velocity feedforward.", "stat_val": "11.8 ms", "stat_label": "SETTLING TIME", "color": "#38BDF8"},
+                {"title": "Impedance + MPC", "badge": "CONFIG C", "desc": "Convex quadratic programming with constraint corridor.", "stat_val": "4.1 ms", "stat_label": "SOLVER LATENCY", "color": "#6366F1"},
+                {"title": "Full Sensorimotor VLA", "badge": "PROPOSED", "desc": "End-to-end vision-language-action cross-attention token policy.", "stat_val": "98.7%", "stat_label": "SUCCESS RATE", "color": "#10B981"}
+            ]
+        ),
+        "17_scientific_terminal_card.html": vs.render_scientific_terminal_card(
+            inner_content_html=vs.render_optimization_contour_paths(title="OPTIMIZER STEP DYNAMICS", subtitle="Realtime Gradient Descent Trace"),
+            status_tag="SIMULATION: CONVERGED // 1000 FPS",
+            telemetry={"SOLVER": "QP-ACTIVE-SET", "ITERATIONS": "42", "KKT_TOL": "1e-6", "EIGEN_MAX": "8.42"},
+            title="TELEMETRY DEBUG TERMINAL"
         )
     }
 

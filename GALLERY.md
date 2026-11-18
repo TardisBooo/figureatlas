@@ -216,3 +216,88 @@ render_triptych_pipeline_layout(
     interconnect_label="SYNCHRONOUS DATA BUS // 500Hz"
 )
 ```
+
+---
+
+### 13. `render_loss_landscape_3d`
+*3D parametric non-convex objective manifold with gradient descent trajectories & contour rings.*
+
+![Loss Landscape 3D](assets/gallery/13_loss_landscape_3d.png)
+
+```python
+render_loss_landscape_3d(
+    title="3D PARAMETRIC LOSS MANIFOLD",
+    subtitle="Non-Convex Energy Surface with Saddle-Point Trajectories",
+    contour_levels=14,
+    accent="#6366F1"
+)
+```
+
+---
+
+### 14. `render_teachable_reservoir_valve`
+*Physical hydraulic reservoir & throttle valve metaphor for gradient accumulation & learning rate decay.*
+
+![Teachable Reservoir Valve](assets/gallery/14_teachable_reservoir_valve.png)
+
+```python
+render_teachable_reservoir_valve(
+    title="HYDRAULIC RESERVOIR & GATED THROTTLE",
+    subtitle="Physical Intuition for Gradient Accumulation & Flow Dissipation",
+    reservoir_level_pct=68,
+    valve_aperture_pct=42
+)
+```
+
+---
+
+### 15. `render_top_formula_bottom_dynamic_layout`
+*Mathematical deduction formula banner with synchronized dynamic simulation/geometric deformation below.*
+
+![Top Formula Bottom Dynamic](assets/gallery/15_top_formula_bottom_dynamic.png)
+
+```python
+render_top_formula_bottom_dynamic_layout(
+    scene_kicker="AXIOM // EQUATIONS OF MOTION",
+    scene_title="Lagrangian Mechanics Formulation",
+    formula_latex=r"\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) - \frac{\partial \mathcal{L}}{\partial q_i} = \tau_i",
+    formula_explanation="The Euler-Lagrange equations establish the fundamental connection between variational stationary action and robotic generalized coordinates.",
+    dynamic_component_html=render_matrix_transformation_2d(title="GENERALIZED COORDINATE MAPPING", subtitle="Tangent Space Basis Deformation")
+)
+```
+
+---
+
+### 16. `render_quad_comparison_layout`
+*2x2 Quad ablation matrix for empirical comparisons, baseline studies & model architecture benchmarks.*
+
+![Quad Comparison Matrix](assets/gallery/16_quad_comparison_matrix.png)
+
+```python
+render_quad_comparison_layout(
+    scene_kicker="ABLATION // EMPIRICAL BENCHMARK",
+    scene_title="Ablation Analysis Across System Architectures",
+    quad_cards=[
+        {"title": "Baseline Rigid", "badge": "CONFIG A", "desc": "Fixed-gain classical PID with rigid link assumption.", "stat_val": "24.2 ms", "stat_label": "TRACKING ERROR", "color": "#64748B"},
+        {"title": "Admittance Hybrid", "badge": "CONFIG B", "desc": "Outer admittance loop with direct velocity feedforward.", "stat_val": "11.8 ms", "stat_label": "SETTLING TIME", "color": "#38BDF8"},
+        {"title": "Impedance + MPC", "badge": "CONFIG C", "desc": "Convex quadratic programming with constraint corridor.", "stat_val": "4.1 ms", "stat_label": "SOLVER LATENCY", "color": "#6366F1"},
+        {"title": "Full Sensorimotor VLA", "badge": "PROPOSED", "desc": "End-to-end vision-language-action cross-attention token policy.", "stat_val": "98.7%", "stat_label": "SUCCESS RATE", "color": "#10B981"}
+    ]
+)
+```
+
+---
+
+### 17. `render_scientific_terminal_card`
+*Sci-fi / academic telemetry terminal window wrapper with status badges & custom metric dictionaries.*
+
+![Scientific Terminal Card](assets/gallery/17_scientific_terminal_card.png)
+
+```python
+render_scientific_terminal_card(
+    inner_content_html=render_optimization_contour_paths(title="OPTIMIZER STEP DYNAMICS", subtitle="Realtime Gradient Descent Trace"),
+    status_tag="SIMULATION: CONVERGED // 1000 FPS",
+    telemetry={"SOLVER": "QP-ACTIVE-SET", "ITERATIONS": "42", "KKT_TOL": "1e-6", "EIGEN_MAX": "8.42"},
+    title="TELEMETRY DEBUG TERMINAL"
+)
+```

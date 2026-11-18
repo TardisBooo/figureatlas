@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div class="scene-layout-container" style="
+        width: 1920px; height: 1080px; background: #080C14; color: #FFFFFF;
+        display: flex; flex-direction: column; padding: 60px 100px; box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    ">
+        <div style="margin-bottom: 28px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #38BDF8; letter-spacing: 1px; text-transform: uppercase;">
+                ABLATION // EMPIRICAL BENCHMARK
+            </div>
+            <div style="font-size: 34px; font-weight: 800; color: #F8FAFC; margin-top: 4px;">
+                Ablation Analysis Across System Architectures
+            </div>
+        </div>
+
+        <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 24px;">
+            
+        <div style="background: #0d121f; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #64748B; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #FFFFFF;">Baseline Rigid</span>
+                    <span style="font-size: 11px; padding: 3px 8px; border-radius: 4px; background: #64748B22; color: #64748B; font-weight: 700;">CONFIG A</span>
+                </div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">Fixed-gain classical PID with rigid link assumption.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 12px; color: #64748B;">TRACKING ERROR</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 800; color: #64748B;">24.2 ms</span>
+            </div>
+        </div>
+        
+        <div style="background: #0d121f; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #38BDF8; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #FFFFFF;">Admittance Hybrid</span>
+                    <span style="font-size: 11px; padding: 3px 8px; border-radius: 4px; background: #38BDF822; color: #38BDF8; font-weight: 700;">CONFIG B</span>
+                </div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">Outer admittance loop with direct velocity feedforward.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 12px; color: #64748B;">SETTLING TIME</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 800; color: #38BDF8;">11.8 ms</span>
+            </div>
+        </div>
+        
+        <div style="background: #0d121f; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #6366F1; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #FFFFFF;">Impedance + MPC</span>
+                    <span style="font-size: 11px; padding: 3px 8px; border-radius: 4px; background: #6366F122; color: #6366F1; font-weight: 700;">CONFIG C</span>
+                </div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">Convex quadratic programming with constraint corridor.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 12px; color: #64748B;">SOLVER LATENCY</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 800; color: #6366F1;">4.1 ms</span>
+            </div>
+        </div>
+        
+        <div style="background: #0d121f; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #10B981; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 18px; font-weight: 700; color: #FFFFFF;">Full Sensorimotor VLA</span>
+                    <span style="font-size: 11px; padding: 3px 8px; border-radius: 4px; background: #10B98122; color: #10B981; font-weight: 700;">PROPOSED</span>
+                </div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">End-to-end vision-language-action cross-attention token policy.</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 12px; color: #64748B;">SUCCESS RATE</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 800; color: #10B981;">98.7%</span>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
