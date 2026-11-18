@@ -1,0 +1,10 @@
+{
+  "id": "scientific-visual-studio",
+  "name": "Scientific Visual Studio",
+  "version": "1.1.0",
+  "description": "Scientific, AI & mathematical visual computation studio for Agents, Slides, and Video productions. 22+ procedural renderers.",
+  "author": "TardisBooo",
+  "type": "skill",
+  "entrypoint": "skills/visual-storyboard-designer/SKILL.md",
+  "compatibility": ["antigravity", "claude-code", "codex", "cursor", "dsh"]
+}

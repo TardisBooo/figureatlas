@@ -301,3 +301,79 @@ render_scientific_terminal_card(
     title="TELEMETRY DEBUG TERMINAL"
 )
 ```
+
+---
+
+### 18. `render_quantum_bloch_circuit`
+*Qiskit-styled 3D Bloch sphere ($|0\rangle, |1\rangle, |\psi\rangle$) with multi-qubit circuit gate sequence (H, X, CNOT, Phase, Measure).*
+
+![Quantum Bloch Circuit](assets/gallery/18_quantum_bloch_circuit.png)
+
+```python
+render_quantum_bloch_circuit(
+    vector=(0.35, 0.61, 0.71),
+    theta_deg=45.0,
+    phi_deg=60.0,
+    title="QUANTUM BLOCH SPHERE & CIRCUIT TELEMETRY",
+    subtitle="Unitary State Vector Rotation & Multi-Qubit Gate Sequence"
+)
+```
+
+---
+
+### 19. `render_bode_nyquist_frequency_plot`
+*Classical control frequency response: dual Bode log magnitude/phase paired with complex Nyquist stability contour encircling $(-1, 0)$.*
+
+![Bode Nyquist Frequency](assets/gallery/19_bode_nyquist_frequency.png)
+
+```python
+render_bode_nyquist_frequency_plot(
+    title="BODE GAIN/PHASE & NYQUIST CONTOUR",
+    subtitle="Frequency Domain Stability Margins Encircling (-1, 0)",
+    gain_margin_db=14.2,
+    phase_margin_deg=48.6
+)
+```
+
+---
+
+### 20. `render_graph_network_topology`
+*Graph Neural Network (GNN) and Knowledge Graph message-passing topology with radiant hubs, directional message arcs, and cluster halos.*
+
+![Graph Network Topology](assets/gallery/20_graph_network_topology.png)
+
+```python
+render_graph_network_topology(
+    title="GNN MESSAGE-PASSING TOPOLOGY",
+    subtitle="Heterogeneous Graph Node Embeddings & Directed Attention Flow"
+)
+```
+
+---
+
+### 21. `render_genomic_sequence_ribbon`
+*Bioinformatics sequence analysis: WebLogo information entropy stack (0-2.0 bits) paired with annotated linear open reading frame tracks.*
+
+![Genomic Sequence Ribbon](assets/gallery/21_genomic_sequence_ribbon.png)
+
+```python
+render_genomic_sequence_ribbon(
+    title="GENOMIC SEQUENCE MOTIF & FEATURE TRACK",
+    subtitle="WebLogo Information Bits Stack & Annotated Open Reading Frame Tracks"
+)
+```
+
+---
+
+### 22. `render_dag_workflow_statechart`
+*Distributed workflow DAG orchestration pipeline with task lifecycle states (queued, running, success, failed) and orthogonal dependency routing.*
+
+![DAG Workflow Statechart](assets/gallery/22_dag_workflow_statechart.png)
+
+```python
+render_dag_workflow_statechart(
+    title="DISTRIBUTED WORKFLOW DAG PIPELINE",
+    subtitle="Layered Task Lifecycle Execution States with Orthogonal Routing"
+)
+```
+

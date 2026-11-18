@@ -21,9 +21,14 @@ from .visual_studio import (
     render_scientific_terminal_card,
     render_cyber_academic_dashboard_layout,
     render_triptych_pipeline_layout,
+    render_quantum_bloch_circuit,
+    render_bode_nyquist_frequency_plot,
+    render_graph_network_topology,
+    render_genomic_sequence_ribbon,
+    render_dag_workflow_statechart,
 )
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __all__ = [
     "render_premium_hero_cover",
     "render_loss_landscape_3d",
@@ -42,4 +47,9 @@ __all__ = [
     "render_scientific_terminal_card",
     "render_cyber_academic_dashboard_layout",
     "render_triptych_pipeline_layout",
+    "render_quantum_bloch_circuit",
+    "render_bode_nyquist_frequency_plot",
+    "render_graph_network_topology",
+    "render_genomic_sequence_ribbon",
+    "render_dag_workflow_statechart",
 ]

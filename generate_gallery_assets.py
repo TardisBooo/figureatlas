@@ -189,6 +189,31 @@ def generate_assets():
             status_tag="SIMULATION: CONVERGED // 1000 FPS",
             telemetry={"SOLVER": "QP-ACTIVE-SET", "ITERATIONS": "42", "KKT_TOL": "1e-6", "EIGEN_MAX": "8.42"},
             title="TELEMETRY DEBUG TERMINAL"
+        ),
+        "18_quantum_bloch_circuit.html": vs.render_quantum_bloch_circuit(
+            vector=(0.35, 0.61, 0.71),
+            theta_deg=45.0,
+            phi_deg=60.0,
+            title="QUANTUM BLOCH SPHERE & CIRCUIT TELEMETRY",
+            subtitle="Unitary State Vector Rotation & Multi-Qubit Gate Sequence"
+        ),
+        "19_bode_nyquist_frequency.html": vs.render_bode_nyquist_frequency_plot(
+            title="BODE GAIN/PHASE & NYQUIST CONTOUR",
+            subtitle="Frequency Domain Stability Margins Encircling (-1, 0)",
+            gain_margin_db=14.2,
+            phase_margin_deg=48.6
+        ),
+        "20_graph_network_topology.html": vs.render_graph_network_topology(
+            title="GNN MESSAGE-PASSING TOPOLOGY",
+            subtitle="Heterogeneous Graph Node Embeddings & Directed Attention Flow"
+        ),
+        "21_genomic_sequence_ribbon.html": vs.render_genomic_sequence_ribbon(
+            title="GENOMIC SEQUENCE MOTIF & FEATURE TRACK",
+            subtitle="WebLogo Information Bits Stack & Annotated Open Reading Frame Tracks"
+        ),
+        "22_dag_workflow_statechart.html": vs.render_dag_workflow_statechart(
+            title="DISTRIBUTED WORKFLOW DAG PIPELINE",
+            subtitle="Layered Task Lifecycle Execution States with Orthogonal Routing"
         )
     }
 

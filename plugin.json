@@ -1,25 +1,29 @@
 {
   "name": "scientific-visual-studio",
   "displayName": "Scientific Visual Studio",
-  "version": "1.0.0",
-  "description": "Abstract, domain-agnostic visual component library and storyboard designer inspired by SciencePlots, figures4papers, 3Blue1Brown/Manim, and Teachable Figures.",
-  "author": {
-    "name": "ViewAtom DeepTutor Team"
-  },
+  "version": "1.1.0",
+  "description": "Domain-agnostic scientific, AI & mathematical visual computation studio for Agents, Slides, and Video productions. 22+ procedural renderers (3B1B, SciencePlots, Qiskit, PlotNeuralNet, PyVista, Control).",
+  "author": "TardisBooo",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/TardisBooo/scientific-visual-studio",
+  "homepage": "https://github.com/TardisBooo/scientific-visual-studio",
   "keywords": [
-    "visualization",
-    "scienceplots",
-    "figures4papers",
-    "3b1b",
-    "manim",
-    "motion-canvas",
-    "storyboard",
+    "scientific-visualization",
     "academic-figures",
-    "teachable-figures",
-    "remotion",
-    "slide-design"
+    "manim",
+    "scienceplots",
+    "plotneuralnet",
+    "qiskit",
+    "pyvista",
+    "agent-skill",
+    "claude-code",
+    "cursor",
+    "codex",
+    "dsh",
+    "antigravity",
+    "remotion"
   ],
   "skills": [
-    "./skills/visual-storyboard-designer"
+    "skills/visual-storyboard-designer/SKILL.md"
   ]
 }
