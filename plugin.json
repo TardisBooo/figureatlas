@@ -1,0 +1,25 @@
+{
+  "name": "scientific-visual-studio",
+  "displayName": "Scientific Visual Studio",
+  "version": "1.0.0",
+  "description": "Abstract, domain-agnostic visual component library and storyboard designer inspired by SciencePlots, figures4papers, 3Blue1Brown/Manim, and Teachable Figures.",
+  "author": {
+    "name": "ViewAtom DeepTutor Team"
+  },
+  "keywords": [
+    "visualization",
+    "scienceplots",
+    "figures4papers",
+    "3b1b",
+    "manim",
+    "motion-canvas",
+    "storyboard",
+    "academic-figures",
+    "teachable-figures",
+    "remotion",
+    "slide-design"
+  ],
+  "skills": [
+    "./skills/visual-storyboard-designer"
+  ]
+}

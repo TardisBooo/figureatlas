@@ -1,0 +1,45 @@
+"""
+Scientific Visual Studio
+Abstract Domain-Agnostic Scientific Visual Component Library & Agent Skill.
+"""
+
+from .visual_studio import (
+    render_premium_hero_cover,
+    render_loss_landscape_3d,
+    render_convergence_band_plot,
+    render_multi_metric_radar,
+    render_teachable_reservoir_valve,
+    render_dual_code_inspector,
+    render_top_formula_bottom_dynamic_layout,
+    render_quad_comparison_layout,
+    render_matrix_transformation_2d,
+    render_latex_formula_derivation_pipeline,
+    render_plotneuralnet_3d_pipeline,
+    render_observable_attention_heatmap,
+    render_pyvista_streamlines_vector_field,
+    render_optimization_contour_paths,
+    render_scientific_terminal_card,
+    render_cyber_academic_dashboard_layout,
+    render_triptych_pipeline_layout,
+)
+
+__version__ = "1.0.0"
+__all__ = [
+    "render_premium_hero_cover",
+    "render_loss_landscape_3d",
+    "render_convergence_band_plot",
+    "render_multi_metric_radar",
+    "render_teachable_reservoir_valve",
+    "render_dual_code_inspector",
+    "render_top_formula_bottom_dynamic_layout",
+    "render_quad_comparison_layout",
+    "render_matrix_transformation_2d",
+    "render_latex_formula_derivation_pipeline",
+    "render_plotneuralnet_3d_pipeline",
+    "render_observable_attention_heatmap",
+    "render_pyvista_streamlines_vector_field",
+    "render_optimization_contour_paths",
+    "render_scientific_terminal_card",
+    "render_cyber_academic_dashboard_layout",
+    "render_triptych_pipeline_layout",
+]

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background: #0d121f; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 22px; color: #FFFFFF; font-family: -apple-system, sans-serif;">
+        <div style="font-size: 16px; font-weight: 700; color: #F8FAFC; margin-bottom: 14px;">DUAL CODE &amp; RUNTIME MEMORY INSPECTOR</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+            <!-- Left Pane: Code -->
+            <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.6; overflow-x: auto;">
+                <div style="color: #64748B; font-size: 11px; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px; margin-bottom: 8px;">SOURCE RUNTIME EXECUTION</div>
+                <div style="display: flex; gap: 14px; padding: 2px 8px;  border-left: 3px solid transparent;"><span style="color: #475569; width: 24px; text-align: right; user-select: none;">1</span><span style="color: #CBD5E1;">def solve_equilibrium(state, external_force):</span></div><div style="display: flex; gap: 14px; padding: 2px 8px;  border-left: 3px solid transparent;"><span style="color: #475569; width: 24px; text-align: right; user-select: none;">2</span><span style="color: #CBD5E1;">    &quot;&quot;&quot;Compute adaptive damping torque.&quot;&quot;&quot;</span></div><div style="display: flex; gap: 14px; padding: 2px 8px;  border-left: 3px solid transparent;"><span style="color: #475569; width: 24px; text-align: right; user-select: none;">3</span><span style="color: #CBD5E1;">    accel = (external_force - state.pos * 9.8) / state.mass</span></div><div style="display: flex; gap: 14px; padding: 2px 8px; background: rgba(99,102,241,0.22); border-left: 3px solid #38BDF8;"><span style="color: #475569; width: 24px; text-align: right; user-select: none;">4</span><span style="color: #FFFFFF;">    torque = Kp * state.error - Kd * state.vel</span></div><div style="display: flex; gap: 14px; padding: 2px 8px;  border-left: 3px solid transparent;"><span style="color: #475569; width: 24px; text-align: right; user-select: none;">5</span><span style="color: #CBD5E1;">    return torque</span></div>
+            </div>
+
+            <!-- Right Pane: Memory State -->
+            <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 14px;">
+                <div style="color: #64748B; font-size: 11px; font-family: 'JetBrains Mono', monospace; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 6px; margin-bottom: 10px;">DYNAMIC HEAP ALLOCATIONS & TOPOLOGY</div>
+                <div style="background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; margin-bottom: 8px;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;"><span style="font-family: monospace; font-weight: 700; color: #F8FAFC; font-size: 13px;">state.pos <span style="color: #64748B; font-weight: 400;">(0xHEAP)</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #38BDF822; color: #38BDF8; font-weight: 700;">ACTIVE</span></div><div style="display: flex; justify-content: space-between; font-family: monospace; font-size: 12px; color: #94A3B8;"><span>data: <strong style="color: #FFFFFF;">1.047 rad</strong></span></div></div><div style="background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; margin-bottom: 8px;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;"><span style="font-family: monospace; font-weight: 700; color: #F8FAFC; font-size: 13px;">state.vel <span style="color: #64748B; font-weight: 400;">(0xHEAP)</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #38BDF822; color: #38BDF8; font-weight: 700;">ACTIVE</span></div><div style="display: flex; justify-content: space-between; font-family: monospace; font-size: 12px; color: #94A3B8;"><span>data: <strong style="color: #FFFFFF;">0.002 rad/s</strong></span></div></div><div style="background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; margin-bottom: 8px;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;"><span style="font-family: monospace; font-weight: 700; color: #F8FAFC; font-size: 13px;">torque_cmd <span style="color: #64748B; font-weight: 400;">(0xHEAP)</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #38BDF822; color: #38BDF8; font-weight: 700;">ACTIVE</span></div><div style="display: flex; justify-content: space-between; font-family: monospace; font-size: 12px; color: #94A3B8;"><span>data: <strong style="color: #FFFFFF;">13.25 N*m</strong></span></div></div><div style="background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 10px 14px; margin-bottom: 8px;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;"><span style="font-family: monospace; font-weight: 700; color: #F8FAFC; font-size: 13px;">status <span style="color: #64748B; font-weight: 400;">(0xHEAP)</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #38BDF822; color: #38BDF8; font-weight: 700;">ACTIVE</span></div><div style="display: flex; justify-content: space-between; font-family: monospace; font-size: 12px; color: #94A3B8;"><span>data: <strong style="color: #FFFFFF;">CONVERGED</strong></span></div></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
