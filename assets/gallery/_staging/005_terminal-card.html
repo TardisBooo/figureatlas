@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="
+        position: relative;
+        background: rgba(10, 14, 23, 0.85);
+        border: 1px solid rgba(56, 189, 248, 0.22);
+        box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.03), 0 8px 32px rgba(0,0,0,0.4);
+        border-radius: 8px;
+        padding: 16px 20px;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    ">
+        <!-- Precision Corner Crosshairs -->
+        <div style="position: absolute; top: -5px; left: -5px; color: #38BDF8; font-size: 10px; font-family: monospace; line-height: 10px;">+</div>
+        <div style="position: absolute; top: -5px; right: -5px; color: #38BDF8; font-size: 10px; font-family: monospace; line-height: 10px;">+</div>
+        <div style="position: absolute; bottom: -5px; left: -5px; color: #38BDF8; font-size: 10px; font-family: monospace; line-height: 10px;">+</div>
+        <div style="position: absolute; bottom: -5px; right: -5px; color: #38BDF8; font-size: 10px; font-family: monospace; line-height: 10px;">+</div>
+
+        <!-- Header Ribbon -->
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 8px; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: #38BDF8; letter-spacing: 0.5px;">TELEMETRY DEBUG TERMINAL</span>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #94A3B8;">
+                SIMULATION: CONVERGED // 1000 FPS
+            </div>
+        </div>
+
+        <!-- Main Inner Content -->
+        <div style="box-sizing: border-box;">
+            
+    <div style="background: #0A0E17; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px 24px; width: 860px; height: 520px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 10px;">
+            <div>
+                <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #F59E0B; letter-spacing: 1px;">PLOTLY // NON-CONVEX OPTIMIZATION</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">OPTIMIZER STEP DYNAMICS</div>
+                <div style="font-size: 12px; color: #64748B;">Realtime Gradient Descent Trace</div>
+            </div>
+            <div style="display: flex; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px;">
+                <span style="color: #EF4444;">-- SGD (120 eps)</span>
+                <span style="color: #F59E0B;">— Momentum (45 eps)</span>
+                <span style="color: #10B981; font-weight: 700;">— Adam (18 eps)</span>
+            </div>
+        </div>
+        <div style="flex: 1; position: relative;">
+            <svg width="100%" height="100%" viewBox="0 0 760 380" style="overflow: visible;">
+                <ellipse cx="360" cy="240" rx="40" ry="25" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.2"/><ellipse cx="360" cy="240" rx="80" ry="50" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.2"/><ellipse cx="360" cy="240" rx="130" ry="85" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.2"/><ellipse cx="360" cy="240" rx="190" ry="125" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.2"/><ellipse cx="360" cy="240" rx="260" ry="175" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.2"/>
+                
+    <!-- SGD -->
+    <path d="M 140 100 L 180 200 L 200 120 L 250 220 L 280 160 L 320 230 L 345 210 L 355 235" fill="none" stroke="#EF4444" stroke-width="2.2" stroke-dasharray="3,2"/>
+    <!-- Momentum -->
+    <path d="M 140 100 L 220 180 L 270 155 L 320 205 L 350 230 L 360 240" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+    <!-- Adam -->
+    <path d="M 140 100 L 250 150 L 320 200 L 350 230 L 360 240" fill="none" stroke="#10B981" stroke-width="3"/>
+    <!-- Target Minima -->
+    <circle cx="360" cy="240" r="6" fill="#10B981"/>
+    <circle cx="360" cy="240" r="14" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="378" y="244" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">GLOBAL MIN θ*</text>
+    
+            </svg>
+        </div>
+    </div>
+    
+        </div>
+
+        <!-- Bottom Micro-Telemetry Ruler -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.06); margin-top: 12px; padding-top: 8px; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 10px;">
+            <div><span style="color: #64748B;">SOLVER:</span> <b style="color: #F8FAFC;">QP-ACTIVE-SET</b> | <span style="color: #64748B;">ITERATIONS:</span> <b style="color: #F8FAFC;">42</b> | <span style="color: #64748B;">KKT_TOL:</span> <b style="color: #F8FAFC;">1e-6</b> | <span style="color: #64748B;">EIGEN_MAX:</span> <b style="color: #F8FAFC;">8.42</b> |</div>
+            <div style="color: #475569;">SEC-VERIFIED // DEEPTUTOR HUD</div>
+        </div>
+    </div>
+    
+</body>
+</html>

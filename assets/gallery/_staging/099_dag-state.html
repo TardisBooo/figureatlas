@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: 860px; height: 520px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #4589FF; font-weight: 700; letter-spacing: 1px;">DISTRIBUTED PIPELINE DAG // AIRFLOW & PREFECT</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">DISTRIBUTED WORKFLOW DAG PIPELINE</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">Layered Task Lifecycle Execution States with Orthogonal Routing</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(69,137,255,0.15); border: 1px solid #4589FF; color: #4589FF; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">STAGE: 2/3 EXECUTING</span>
+                <span style="background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #10B981; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">CONCURRENCY: 4 WORKERS</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <rect width="820" height="400" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+            
+            <line x1="260" y1="30" x2="260" y2="370" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="520" y1="30" x2="520" y2="370" stroke="#1E293B" stroke-width="1" stroke-dasharray="4,4"/>
+            <text x="180" y="385" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">RANK 0: INGESTION</text>
+            <text x="440" y="385" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">RANK 1: PARALLEL COMPUTE</text>
+            <text x="700" y="385" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">RANK 2: SERVO ACTUATION</text>
+
+            <path d="M260,230 H310.0 V160 H360" fill="none" stroke="#475569" stroke-width="2"/><polygon points="360,160 354,156 354,164" fill="#94A3B8"/><path d="M260,230 H310.0 V300 H360" fill="none" stroke="#475569" stroke-width="2"/><polygon points="360,300 354,296 354,304" fill="#94A3B8"/><path d="M520,160 H570.0 V160 H620" fill="none" stroke="#475569" stroke-width="2"/><polygon points="620,160 614,156 614,164" fill="#94A3B8"/><path d="M520,300 H570.0 V160 H620" fill="none" stroke="#475569" stroke-width="2"/><polygon points="620,160 614,156 614,164" fill="#94A3B8"/><path d="M520,300 H570.0 V300 H620" fill="none" stroke="#475569" stroke-width="2"/><polygon points="620,300 614,296 614,304" fill="#94A3B8"/>
+            <rect x="100" y="200" width="160" height="60" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1.5"/><rect x="100" y="200" width="4" height="60" rx="2" fill="#10B981"/><text x="114" y="224" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">Ingest Invariance</text><text x="114" y="246" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">[SUCCESS]</text><text x="248" y="246" fill="#64748B" font-family="monospace" font-size="10" text-anchor="end">140ms</text><rect x="360" y="130" width="160" height="60" rx="6" fill="#0B132B" stroke="#4589FF" stroke-width="1.5"/><rect x="360" y="130" width="4" height="60" rx="2" fill="#4589FF"/><text x="374" y="154" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">Convex MPC Solve</text><text x="374" y="176" fill="#4589FF" font-family="monospace" font-size="10" font-weight="700">[RUNNING]</text><text x="508" y="176" fill="#64748B" font-family="monospace" font-size="10" text-anchor="end">12ms</text><rect x="360" y="270" width="160" height="60" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1.5"/><rect x="360" y="270" width="4" height="60" rx="2" fill="#10B981"/><text x="374" y="294" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">Kalman Filtering</text><text x="374" y="316" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">[SUCCESS]</text><text x="508" y="316" fill="#64748B" font-family="monospace" font-size="10" text-anchor="end">4ms</text><rect x="620" y="130" width="160" height="60" rx="6" fill="#0B132B" stroke="#64748B" stroke-width="1.5"/><rect x="620" y="130" width="4" height="60" rx="2" fill="#64748B"/><text x="634" y="154" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">Torque Command</text><text x="634" y="176" fill="#64748B" font-family="monospace" font-size="10" font-weight="700">[QUEUED]</text><text x="768" y="176" fill="#64748B" font-family="monospace" font-size="10" text-anchor="end">--</text><rect x="620" y="270" width="160" height="60" rx="6" fill="#0B132B" stroke="#10B981" stroke-width="1.5"/><rect x="620" y="270" width="4" height="60" rx="2" fill="#10B981"/><text x="634" y="294" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="700">Safety Reflex Interlock</text><text x="634" y="316" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">[SUCCESS]</text><text x="768" y="316" fill="#64748B" font-family="monospace" font-size="10" text-anchor="end">1ms</text>
+        </svg>
+    </div>
+    
+</body>
+</html>

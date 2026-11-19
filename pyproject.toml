@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "scientific-visual-studio"
-version = "1.0.0"
-description = "Domain-agnostic scientific, AI, and mathematical visual computation studio for Agents, Slides, and Video productions."
+name = "figureatlas"
+version = "2.0.0"
+description = "300 verified figure types for papers, slides, posters, and video frames."
 readme = "README.md"
 authors = [
     { name = "TardisBooo & DeepTutor Team", email = "i_chenshaobo@163.com" }
@@ -36,9 +36,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/TardisBooo/scientific-visual-studio"
-Repository = "https://github.com/TardisBooo/scientific-visual-studio.git"
-Issues = "https://github.com/TardisBooo/scientific-visual-studio/issues"
+Homepage = "https://github.com/TardisBooo/figureatlas"
+Repository = "https://github.com/TardisBooo/figureatlas.git"
+Issues = "https://github.com/TardisBooo/figureatlas/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

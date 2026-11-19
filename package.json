@@ -1,18 +1,18 @@
 {
-  "name": "@tardisbooo/scientific-visual-studio",
-  "version": "1.2.0",
-  "description": "Domain-agnostic scientific, AI & mathematical visual computation studio for Agents, Slides, and Video productions. Procedural renderers for 3B1B, SciencePlots, Qiskit, PlotNeuralNet, PyVista, Control, RDKit, Smith Chart, and Orbital Mechanics.",
+  "name": "@tardisbooo/figureatlas",
+  "version": "2.0.0",
+  "description": "300 verified scientific figure types for papers, slides, posters, and agent-made video frames.",
   "main": "scientific_visual_studio/__init__.py",
   "author": "TardisBooo <i_chenshaobo@163.com>",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TardisBooo/scientific-visual-studio.git"
+    "url": "git+https://github.com/TardisBooo/figureatlas.git"
   },
   "bugs": {
-    "url": "https://github.com/TardisBooo/scientific-visual-studio/issues"
+    "url": "https://github.com/TardisBooo/figureatlas/issues"
   },
-  "homepage": "https://github.com/TardisBooo/scientific-visual-studio#readme",
+  "homepage": "https://github.com/TardisBooo/figureatlas#readme",
   "keywords": [
     "dsh-plugin",
     "dsh-skill",

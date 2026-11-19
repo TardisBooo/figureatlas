@@ -32,7 +32,7 @@ from .visual_studio import (
     render_feynman_diagram_interaction,
 )
 
-__version__ = "1.2.0"
+__version__ = "2.0.0"
 __all__ = [
     "render_premium_hero_cover",
     "render_loss_landscape_3d",

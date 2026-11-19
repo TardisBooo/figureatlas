@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: 860px; height: 520px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A855F7; font-weight: 700; letter-spacing: 1px;">HIGH ENERGY PARTICLE PHYSICS // TIKZ-FEYNMAN SPEC</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">QED FEYNMAN PARTICLE INTERACTION</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">s-Channel Electron-Positron Annihilation via Virtual Gauge Boson Propagator</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(168,85,247,0.15); border: 1px solid #A855F7; color: #A855F7; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">s-CHANNEL</span>
+                <span style="background: rgba(56,189,248,0.15); border: 1px solid #38BDF8; color: #38BDF8; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">α = 1/137.036 (Fine Structure)</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <rect width="820" height="400" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+
+            <!-- Time and Space coordinates guides -->
+            <text x="60" y="370" fill="#64748B" font-family="monospace" font-size="11">TIME ➔ (Left to Right)</text>
+            <text x="760" y="370" fill="#64748B" font-family="monospace" font-size="11" text-anchor="end">MATRIX ELEMENT: ℳ = -e² [ūγ^μ u] [v̄γ_μ v] / s</text>
+
+            <!-- INCOMING LEGS (Left) -->
+            <!-- Electron e- (incoming, arrow pointing right to vertex 1) -->
+            <line x1="130" y1="100" x2="310" y2="220" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow at ~55% of line -->
+            <polygon points="230,165 218,160 224,172" fill="#F8FAFC"/>
+            <text x="110" y="105" fill="#38BDF8" font-family="monospace" font-size="16" font-weight="800">e⁻</text>
+            <text x="140" y="145" fill="#64748B" font-family="monospace" font-size="11">p₁ ➔</text>
+
+            <!-- Positron e+ (incoming, arrow pointing AWAY from vertex 1: backwards in time) -->
+            <line x1="130" y1="340" x2="310" y2="220" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow pointing down-left -->
+            <polygon points="215,280 227,285 221,273" fill="#F8FAFC"/>
+            <text x="110" y="348" fill="#FA4D56" font-family="monospace" font-size="16" font-weight="800">e⁺</text>
+            <text x="140" y="300" fill="#64748B" font-family="monospace" font-size="11">p₂ ➔</text>
+
+            <!-- VERTEX 1 -->
+            <circle cx="310" cy="220" r="6" fill="#A855F7"/>
+            <text x="300" y="206" fill="#A855F7" font-family="monospace" font-size="11" font-weight="700">ieγ^μ</text>
+
+            <!-- VIRTUAL PROPAGATOR: Photon γ (Sine Wiggly Wave from v1 to v2) -->
+            <path d="M310,220 
+                     q20,-16 40,0 q20,16 40,0 
+                     q20,-16 40,0 q20,16 40,0 
+                     q20,-16 40,0" 
+                  fill="none" stroke="#38BDF8" stroke-width="3"/>
+            <text x="410.0" y="196" fill="#38BDF8" font-family="monospace" font-size="14" font-weight="800" text-anchor="middle">γ* (Virtual Photon)</text>
+            <text x="410.0" y="246" fill="#64748B" font-family="monospace" font-size="11" text-anchor="middle">q = p₁ + p₂ (s = q²)</text>
+
+            <!-- VERTEX 2 -->
+            <circle cx="510" cy="220" r="6" fill="#A855F7"/>
+            <text x="520" y="206" fill="#A855F7" font-family="monospace" font-size="11" font-weight="700">ieγ_μ</text>
+
+            <!-- OUTGOING LEGS (Right) -->
+            <!-- Muon μ- (outgoing, arrow pointing away to upper right) -->
+            <line x1="510" y1="220" x2="690" y2="100" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow pointing up-right -->
+            <polygon points="610,153 598,158 604,146" fill="#F8FAFC"/>
+            <text x="705" y="105" fill="#38BDF8" font-family="monospace" font-size="16" font-weight="800">μ⁻</text>
+            <text x="650" y="145" fill="#64748B" font-family="monospace" font-size="11">➔ k₁</text>
+
+            <!-- Anti-Muon μ+ (outgoing, arrow pointing backwards to vertex 2) -->
+            <line x1="510" y1="220" x2="690" y2="340" stroke="#F8FAFC" stroke-width="2.5"/>
+            <!-- Arrow pointing up-left -->
+            <polygon points="595,273 607,268 601,280" fill="#F8FAFC"/>
+            <text x="705" y="348" fill="#FA4D56" font-family="monospace" font-size="16" font-weight="800">μ⁺</text>
+            <text x="650" y="300" fill="#64748B" font-family="monospace" font-size="11">➔ k₂</text>
+        </svg>
+    </div>
+    
+</body>
+</html>

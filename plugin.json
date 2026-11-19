@@ -1,14 +1,14 @@
 {
-  "name": "scientific-visual-studio",
-  "displayName": "Scientific Visual Studio",
-  "version": "1.2.0",
-  "description": "Domain-agnostic scientific, AI & mathematical visual computation studio for Agents, Slides, and Video productions. 26 procedural renderers (Manim, SciencePlots, Qiskit, PlotNeuralNet, PyVista, Control, RDKit, scikit-rf, Astropy, Feynman).",
+  "name": "figureatlas",
+  "displayName": "FigureAtlas",
+  "version": "2.0.0",
+  "description": "300 verified figure types for papers, slides, posters, and video frames. Agents pick a figure id and export HTML or SVG.",
   "author": {
     "name": "TardisBooo"
   },
   "license": "Apache-2.0",
-  "repository": "https://github.com/TardisBooo/scientific-visual-studio",
-  "homepage": "https://github.com/TardisBooo/scientific-visual-studio",
+  "repository": "https://github.com/TardisBooo/figureatlas",
+  "homepage": "https://github.com/TardisBooo/figureatlas",
   "keywords": [
     "scientific-visualization",
     "academic-figures",

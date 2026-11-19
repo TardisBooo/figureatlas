@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div class="scene-layout-container" style="
+        width: 1920px; height: 1080px; background: #080C14; color: #FFFFFF;
+        display: flex; flex-direction: column; padding: 60px 100px; box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    ">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #38BDF8; letter-spacing: 1px; text-transform: uppercase;">
+                    ARCHITECTURE // PIPELINE TOPOLOGY
+                </div>
+                <div style="font-size: 34px; font-weight: 800; color: #F8FAFC; margin-top: 4px;">
+                    Sense-Plan-Act Synchronous Computing Architecture
+                </div>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #64748B;">
+                BUS ARCHITECTURE // SYNCHRONOUS DATA BUS // 500Hz
+            </div>
+        </div>
+
+        <div style="flex: 1; display: flex; gap: 24px; position: relative;">
+            
+        <div style="flex: 1; background: #0D1322; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #38BDF8; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; color: #38BDF8;">STAGE 01 // MULTIMODAL ENCODER</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Sensory Acquisition</div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">Sub-millimeter optical joint encoders and 6-axis force-torque sensor array.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748B;">RATE</span><b style="color: #F8FAFC;">500Hz</b></div><div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748B;">PRECISION</span><b style="color: #F8FAFC;">0.01mm</b></div>
+            </div>
+        </div>
+        
+        <div style="flex: 1; background: #0D1322; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #6366F1; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; color: #6366F1;">STAGE 02 // QP-MPC SOLVER</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Trajectory Planning</div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">Realtime convex quadratic program trajectory optimization with collision corridors.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748B;">HORIZON</span><b style="color: #F8FAFC;">50 STEPS</b></div><div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748B;">LATENCY</span><b style="color: #F8FAFC;">12ms</b></div>
+            </div>
+        </div>
+        
+        <div style="flex: 1; background: #0D1322; border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid #10B981; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; color: #10B981;">STAGE 03 // IMPEDANCE CONTROL</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Torque Servo Loop</div>
+                <p style="font-size: 13.5px; color: #94A3B8; line-height: 1.5; margin: 0 0 16px 0;">Hard-realtime joint motor current controller executing compliance reflexes.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748B;">LOOP</span><b style="color: #F8FAFC;">1000Hz</b></div><div style="display: flex; justify-content: space-between; margin-bottom: 4px;"><span style="color: #64748B;">BANDWIDTH</span><b style="color: #F8FAFC;">1200 rad/s</b></div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>

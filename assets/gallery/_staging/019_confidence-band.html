@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background: #0d121f; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 22px; color: #FFFFFF; font-family: -apple-system, sans-serif;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+            <div>
+                <div style="font-size: 16px; font-weight: 700; color: #F8FAFC;">EMPIRICAL CONVERGENCE &amp; CONFIDENCE BANDS</div>
+                <div style="font-size: 12.5px; color: #94A3B8; margin-top: 3px;">Monte Carlo Empirical Variance Bands Across 100 Independent Runs</div>
+            </div>
+            <div style="display: flex; gap: 16px; font-size: 12px; font-family: 'JetBrains Mono', monospace;">
+                <span style="color: #64748B; display: flex; align-items: center; gap: 6px;">
+                    <span style="width: 14px; height: 3px; background: #64748B; display: inline-block;"></span>
+                    First-Order Baseline (O(1/√k))
+                </span>
+                <span style="color: #38BDF8; display: flex; align-items: center; gap: 6px;">
+                    <span style="width: 14px; height: 3px; background: #38BDF8; display: inline-block;"></span>
+                    Proposed Auto-Engine (O(1/k²))
+                </span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 900 480" style="width: 100%; height: auto; display: block; background: #080C14; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);">
+            <!-- Grid Lines -->
+            <line x1="90" y1="361.3" x2="860" y2="361.3" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="365.3" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">0.5</text><line x1="90" y1="312.6" x2="860" y2="312.6" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="316.6" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">1.0</text><line x1="90" y1="263.9" x2="860" y2="263.9" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="267.9" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">1.5</text><line x1="90" y1="215.3" x2="860" y2="215.3" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="219.3" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">2.0</text><line x1="90" y1="166.6" x2="860" y2="166.6" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="170.6" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">2.5</text><line x1="90" y1="117.9" x2="860" y2="117.9" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="121.9" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">3.0</text><line x1="90" y1="69.2" x2="860" y2="69.2" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/><text x="76" y="73.2" fill="#64748B" font-family="monospace" font-size="12" text-anchor="end">3.5</text><line x1="90.0" y1="40" x2="90.0" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><text x="90.0" y="434" fill="#64748B" font-family="monospace" font-size="12" text-anchor="middle">0</text><line x1="244.0" y1="40" x2="244.0" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><text x="244.0" y="434" fill="#64748B" font-family="monospace" font-size="12" text-anchor="middle">10</text><line x1="398.0" y1="40" x2="398.0" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><text x="398.0" y="434" fill="#64748B" font-family="monospace" font-size="12" text-anchor="middle">20</text><line x1="552.0" y1="40" x2="552.0" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><text x="552.0" y="434" fill="#64748B" font-family="monospace" font-size="12" text-anchor="middle">30</text><line x1="706.0" y1="40" x2="706.0" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><text x="706.0" y="434" fill="#64748B" font-family="monospace" font-size="12" text-anchor="middle">40</text><line x1="860.0" y1="40" x2="860.0" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><text x="860.0" y="434" fill="#64748B" font-family="monospace" font-size="12" text-anchor="middle">50</text>
+
+            <!-- Base Shaded Band & Curve -->
+            <path d="M 90.0,47.8 L 167.0,105.2 L 244.0,150.0 L 321.0,184.1 L 398.0,210.4 L 475.0,228.9 L 552.0,243.5 L 629.0,254.2 L 706.0,262.0 L 783.0,268.8 L 860.0,273.7 L 860.0,297.1 L 783.0,294.1 L 706.0,289.3 L 629.0,283.4 L 552.0,274.7 L 475.0,263.9 L 398.0,249.3 L 321.0,226.9 L 244.0,198.7 L 167.0,159.8 L 90.0,110.1 Z" fill="#64748B" opacity="0.18"/>
+            <path d="M 90.0,78.9 L 167.0,132.5 L 244.0,174.4 L 321.0,205.5 L 398.0,229.9 L 475.0,246.4 L 552.0,259.1 L 629.0,268.8 L 706.0,275.6 L 783.0,281.5 L 860.0,285.4" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+            <!-- Proposed Shaded Band & Curve -->
+            <path d="M 90.0,49.7 L 167.0,188.0 L 244.0,260.1 L 321.0,309.7 L 398.0,340.9 L 475.0,358.4 L 552.0,371.1 L 629.0,379.8 L 706.0,386.6 L 783.0,390.5 L 860.0,393.9 L 860.0,396.9 L 783.0,394.4 L 706.0,390.5 L 629.0,385.7 L 552.0,378.8 L 475.0,368.1 L 398.0,352.6 L 321.0,325.3 L 244.0,283.4 L 167.0,223.1 L 90.0,108.2 Z" fill="#38BDF8" opacity="0.22"/>
+            <path d="M 90.0,78.9 L 167.0,205.5 L 244.0,271.7 L 321.0,317.5 L 398.0,346.7 L 475.0,363.3 L 552.0,374.9 L 629.0,382.7 L 706.0,388.6 L 783.0,392.5 L 860.0,395.4" fill="none" stroke="#38BDF8" stroke-width="3.5" filter="drop-shadow(0 0 6px rgba(56,189,248,0.5))"/>
+
+            <!-- Axes Lines -->
+            <line x1="90" y1="410" x2="860" y2="410" stroke="#475569" stroke-width="1.5"/>
+            <line x1="90" y1="40" x2="90" y2="410" stroke="#475569" stroke-width="1.5"/>
+
+            <!-- Axis Labels -->
+            <text x="450.0" y="462" fill="#94A3B8" font-size="13" font-family="-apple-system, sans-serif" text-anchor="middle" font-weight="600">Training Iterations (kSteps)</text>
+            <text x="24" y="240.0" fill="#94A3B8" font-size="13" font-family="-apple-system, sans-serif" text-anchor="middle" font-weight="600" transform="rotate(-90 24 240.0)">Empirical Risk / Loss L(θ)</text>
+        </svg>
+    </div>
+    
+</body>
+</html>

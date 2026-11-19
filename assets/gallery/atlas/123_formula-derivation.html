@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background: #0A0E17; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px 24px; width: 860px; height: 520px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;">
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 10px; margin-bottom: 14px;">
+            <div style="font-size: 11px; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #38BDF8; letter-spacing: 1px;">MANIM // TRANSFORM MATCHING TEX</div>
+            <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">STEPWISE MATHEMATICAL DEDUCTION</div>
+            <div style="font-size: 12px; color: #64748B;">TransformMatchingTex Symbolic Equation Pipeline</div>
+        </div>
+        <div style="flex: 1; overflow-y: auto;">
+            
+        <div style="background: rgba(15,23,42,0.4); border: 1.5px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; transition: all 0.2s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; background: #64748B; color: #080C14; padding: 2px 6px; border-radius: 4px;">STEP 1</span>
+                    <span style="font-size: 13px; font-weight: 700; color: #64748B;">Regulated Objective</span>
+                </div>
+                
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #F8FAFC; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; letter-spacing: 0.5px;">
+                J = \frac{1}{2N} \sum_{i=1}^N \|y_i - f(x_i; \theta)\|^2 + \lambda \Omega(\theta)
+            </div>
+            <div style="font-size: 12px; color: #94A3B8; line-height: 1.4;">
+                Mean squared empirical risk regularized by Sobolev penalty norm.
+            </div>
+        </div>
+        
+        <div style="background: rgba(56,189,248,0.08); border: 1.5px solid rgba(56,189,248,0.4); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; transition: all 0.2s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; background: #38BDF8; color: #080C14; padding: 2px 6px; border-radius: 4px;">STEP 2</span>
+                    <span style="font-size: 13px; font-weight: 700; color: #38BDF8;">Analytic Gradient</span>
+                </div>
+                <span style="font-size: 10px; font-family: monospace; color: #38BDF8; font-weight: 700;">● ACTIVE FOCUS</span>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #F8FAFC; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; letter-spacing: 0.5px;">
+                \nabla_\theta J = -\frac{1}{N} X^T (y - X\theta) + 2\lambda \theta
+            </div>
+            <div style="font-size: 12px; color: #94A3B8; line-height: 1.4;">
+                Closed-form first-order derivative indicating steep descent direction.
+            </div>
+        </div>
+        
+        <div style="background: rgba(15,23,42,0.4); border: 1.5px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; transition: all 0.2s;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 800; background: #64748B; color: #080C14; padding: 2px 6px; border-radius: 4px;">STEP 3</span>
+                    <span style="font-size: 13px; font-weight: 700; color: #64748B;">Closed-Form Solution</span>
+                </div>
+                
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #F8FAFC; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; letter-spacing: 0.5px;">
+                \theta^* = (X^T X + 2N\lambda I)^{-1} X^T y
+            </div>
+            <div style="font-size: 12px; color: #94A3B8; line-height: 1.4;">
+                Ridge-regularized optimal parameter vector bypassing numerical drift.
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>

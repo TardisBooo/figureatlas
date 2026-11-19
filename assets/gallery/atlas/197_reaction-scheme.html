@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <div style="background: #080C14; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; color: #FFFFFF; font-family: -apple-system, sans-serif; width: 860px; height: 520px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #10B981; font-weight: 700; letter-spacing: 1px;">CHEMINFORMATICS // RDKit 2D MOLECULAR SPEC</div>
+                <div style="font-size: 16px; font-weight: 800; color: #F8FAFC; margin-top: 2px;">RDKIT CHEMICAL REACTION &amp; MOLECULAR TOPOLOGY</div>
+                <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">2D Kekule Skeletal Bonds with Stereochemical Wedges and Reagent Catalysis</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <span style="background: rgba(16,185,129,0.15); border: 1px solid #10B981; color: #10B981; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">94% YIELD</span>
+                <span style="background: rgba(56,189,248,0.15); border: 1px solid #38BDF8; color: #38BDF8; font-size: 10px; font-family: monospace; padding: 2px 8px; border-radius: 4px; font-weight: 700;">HECK COUPLING</span>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 820 400" style="width: 100%; height: 400px; overflow: visible;">
+            <rect width="820" height="400" rx="8" fill="#0B132B" stroke="#1E293B" stroke-width="1"/>
+            
+            <!-- LEFT: REACTANTS -->
+            <!-- Molecule A: Bromobenzene -->
+            <g transform="translate(60, 160)">
+                <!-- Benzene Ring -->
+                <polygon points="60,0 90,17 90,52 60,69 30,52 30,17" fill="none" stroke="#F8FAFC" stroke-width="2.5"/>
+                <!-- Alternating double bonds -->
+                <line x1="60" y1="6" x2="84" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="84" y1="48" x2="60" y2="62" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="36" y1="48" x2="36" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                <!-- Substituent -Br -->
+                <line x1="90" y1="35" x2="130" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                <text x="145" y="41" fill="#FA4D56" font-family="monospace" font-size="16" font-weight="800">Br</text>
+            </g>
+
+            <text x="245" y="200" fill="#94A3B8" font-family="monospace" font-size="22" font-weight="700">+</text>
+
+            <!-- Molecule B: Methyl Acrylate -->
+            <g transform="translate(260, 160)">
+                <line x1="20" y1="50" x2="55" y2="30" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="22" y1="44" x2="52" y2="26" stroke="#F8FAFC" stroke-width="1.8"/>
+                <line x1="55" y1="30" x2="90" y2="50" stroke="#F8FAFC" stroke-width="2.5"/>
+                <!-- Carbonyl =O -->
+                <line x1="88" y1="50" x2="88" y2="85" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="94" y1="50" x2="94" y2="85" stroke="#F8FAFC" stroke-width="2"/>
+                <text x="86" y="105" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                <!-- Ester -OMe -->
+                <line x1="90" y1="50" x2="120" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                <text x="126" y="38" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                <line x1="145" y1="35" x2="165" y2="48" stroke="#F8FAFC" stroke-width="2.5"/>
+            </g>
+
+            <!-- CENTER: REACTION ARROW -->
+            <g transform="translate(435, 195)">
+                <text x="45" y="-18" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">Pd(OAc)2, P(o-tol)3 // NEt3, 100°C</text>
+                <line x1="0" y1="0" x2="90" y2="0" stroke="#38BDF8" stroke-width="3"/>
+                <polygon points="90,0 80,-6 80,6" fill="#38BDF8"/>
+                <text x="45" y="18" fill="#10B981" font-family="monospace" font-size="11" font-weight="700" text-anchor="middle">Regioselective Trans</text>
+            </g>
+
+            <!-- RIGHT: PRODUCT (Methyl Cinnamate) -->
+            <g transform="translate(545, 160)">
+                <!-- Benzene Ring -->
+                <polygon points="60,0 90,17 90,52 60,69 30,52 30,17" fill="none" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="60" y1="6" x2="84" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="84" y1="48" x2="60" y2="62" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="36" y1="48" x2="36" y2="20" stroke="#F8FAFC" stroke-width="2"/>
+                
+                <!-- Trans double bond connecting to ester -->
+                <line x1="90" y1="35" x2="125" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="125" y1="35" x2="155" y2="15" stroke="#F8FAFC" stroke-width="2.5"/>
+                <line x1="127" y1="42" x2="153" y2="24" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="155" y1="15" x2="185" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+                
+                <!-- Carbonyl =O -->
+                <line x1="183" y1="35" x2="183" y2="65" stroke="#F8FAFC" stroke-width="2"/>
+                <line x1="189" y1="35" x2="189" y2="65" stroke="#F8FAFC" stroke-width="2"/>
+                <text x="180" y="82" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                
+                <!-- Ester -OMe -->
+                <line x1="185" y1="35" x2="210" y2="20" stroke="#F8FAFC" stroke-width="2.5"/>
+                <text x="215" y="24" fill="#FA4D56" font-family="monospace" font-size="15" font-weight="800">O</text>
+                <line x1="230" y1="20" x2="250" y2="35" stroke="#F8FAFC" stroke-width="2.5"/>
+            </g>
+
+            <!-- Bottom Telemetry Specs -->
+            <g transform="translate(60, 340)">
+                <text x="0" y="20" fill="#64748B" font-family="monospace" font-size="11">SMILES: O=C(OC)/C=C/c1ccccc1</text>
+                <text x="360" y="20" fill="#64748B" font-family="monospace" font-size="11">MOL WT: 162.19 g/mol</text>
+                <text x="560" y="20" fill="#10B981" font-family="monospace" font-size="11">LOGP: 2.14 // TOX: NOMINAL</text>
+            </g>
+        </svg>
+    </div>
+    
+</body>
+</html>

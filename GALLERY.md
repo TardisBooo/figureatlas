@@ -1,442 +1,249 @@
-# Scientific Visual Studio — Visual Catalogue & API Reference 📚
-
-This document details every procedural visualization component and layout template available in **Scientific Visual Studio**, complete with visual previews and schema definitions.
-
----
-
-### 1. `render_premium_hero_cover`
-*High-impact cinematic lesson & presentation title cover.*
-
-![Hero Cover](assets/gallery/01_hero_cover.png)
-
-```python
-render_premium_hero_cover(
-    title="ADVANCED PHYSICAL EMBODIMENT // DYNAMICS & CONTROL",
-    subtitle="From First-Principles Rigid Multibody Kinematics to High-Rate Closed-Loop Impedance Control",
-    eyebrow_badge="✨ FLAGSHIP CURRICULUM SPECIFICATION",
-    module_tag="MODULE 01 // FOUNDATIONS",
-    feature_chips=["RIGID BODY DYNAMICS", "CLOSED-LOOP IMPEDANCE", "REALTIME SIMULATION", "QUADRATIC PROGRAMMING"],
-    accent_color="#38BDF8"
-)
-```
-
----
-
-### 2. `render_matrix_transformation_2d`
-*3Blue1Brown-style affine coordinate grid transformation with basis mapping.*
-
-![Matrix Transformation](assets/gallery/02_matrix_transformation.png)
-
-```python
-render_matrix_transformation_2d(
-    matrix=[[1.5, 0.8], [0.4, 1.2]],
-    basis_labels=("î", "ĵ"),
-    transformed_vectors=[
-        {"coords": [1.5, 0.4], "color": "#38BDF8", "label": "T(î)"},
-        {"coords": [0.8, 1.2], "color": "#10B981", "label": "T(ĵ)"}
-    ],
-    title="AFFINE BASIS TRANSFORMATION // R² MANIFOLD",
-    subtitle="Coordinate Grid Shearing & Volume Distortion under Linear Operator A"
-)
-```
-
----
-
-### 3. `render_latex_formula_derivation_pipeline`
-*Step-by-step formal mathematical deduction with step status and mathematical annotations.*
-
-![Formula Derivation](assets/gallery/03_formula_derivation.png)
-
-```python
-render_latex_formula_derivation_pipeline(
-    steps=[
-        {"step": 1, "label": "Hamiltonian Action", "latex": r"S[\mathbf{q}] = \int_{t_1}^{t_2} \mathcal{L}(\mathbf{q}, \dot{\mathbf{q}}, t) \, dt", "desc": "Stationary action principle definition."},
-        {"step": 2, "label": "First Variation", "latex": r"\delta S = \int_{t_1}^{t_2} \left( \frac{\partial \mathcal{L}}{\partial \mathbf{q}}\delta \mathbf{q} + \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}\delta \dot{\mathbf{q}} \right) dt = 0", "desc": "Variation with vanishing boundary values."},
-        {"step": 3, "label": "Euler-Lagrange Equation", "latex": r"\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\mathbf{q}}}\right) - \frac{\partial \mathcal{L}}{\partial \mathbf{q}} = \mathbf{\tau}_{ext}", "desc": "Fundamental equation of robotic generalized coordinates."}
-    ],
-    active_step=2,
-    title="FORMAL ANALYTIC DEDUCTION",
-    subtitle="Euler-Lagrange Equations of Motion from Variational Principles"
-)
-```
-
----
-
-### 4. `render_plotneuralnet_3d_pipeline`
-*3D isometric multi-channel tensor layer pipeline in the style of PlotNeuralNet.*
-
-![PlotNeuralNet 3D Pipeline](assets/gallery/04_plotneuralnet_3d.png)
-
-```python
-render_plotneuralnet_3d_pipeline(
-    layers=[
-        {"name": "Input Image", "dim": "224x224x3", "color": "#38BDF8", "width": 24, "height": 90, "depth": 90},
-        {"name": "Conv1 + Pool", "dim": "112x112x64", "color": "#6366F1", "width": 36, "height": 65, "depth": 65},
-        {"name": "Bottleneck Block", "dim": "28x28x256", "color": "#818CF8", "width": 48, "height": 45, "depth": 45},
-        {"name": "Latent Embedding", "dim": "1x1024", "color": "#10B981", "width": 18, "height": 110, "depth": 18}
-    ],
-    title="MULTIMODAL DEEP TENSOR TOPOLOGY",
-    subtitle="Isometric Feature Map Dimensions & Cross-Layer Receptive Cones"
-)
-```
-
----
-
-### 5. `render_observable_attention_heatmap`
-*Observable D3 style query-key attention matrix with dynamic interaction arcs.*
-
-![Attention Heatmap](assets/gallery/05_attention_heatmap.png)
-
-```python
-render_observable_attention_heatmap(
-    tokens_q=["Observe", "Compute", "Plan", "Actuate"],
-    tokens_k=["Observe", "Compute", "Plan", "Actuate"],
-    weights=[
-        [0.82, 0.12, 0.04, 0.02],
-        [0.35, 0.55, 0.08, 0.02],
-        [0.10, 0.25, 0.58, 0.07],
-        [0.05, 0.10, 0.20, 0.65]
-    ],
-    focus_idx=1,
-    title="BIDIRECTIONAL ATTENTION MATRIX & ATTENTION ARCS",
-    subtitle="Pairwise Softmax Affinity Distribution for Realtime Sensorimotor Tokens"
-)
-```
-
----
-
-### 6. `render_pyvista_streamlines_vector_field`
-*PyVista / VTK inspired continuous 3D vector field streamlines with scientific colormap.*
-
-![Vector Field Streamlines](assets/gallery/06_pyvista_streamlines.png)
-
-```python
-render_pyvista_streamlines_vector_field(
-    title="3D PHYSICAL FIELD STREAMLINES & GRADIENT",
-    subtitle="Continuous Vector Field Flow within Isometric Bounding Grid"
-)
-```
-
----
-
-### 7. `render_optimization_contour_paths`
-*Non-convex contour optimization trajectories comparing SGD, Momentum, and Adam.*
-
-![Optimization Contour Paths](assets/gallery/07_optimization_contours.png)
-
-```python
-render_optimization_contour_paths(
-    title="NON-CONVEX CONTOUR OPTIMIZATION",
-    subtitle="Comparative Gradient Trajectories: SGD vs Momentum vs Adam"
-)
-```
-
----
-
-### 8. `render_convergence_band_plot`
-*SciencePlots standard empirical risk convergence curves with shaded variance bounds.*
-
-![Convergence Band Plot](assets/gallery/08_confidence_band.png)
-
-```python
-render_convergence_band_plot(
-    title="EMPIRICAL CONVERGENCE & CONFIDENCE BANDS",
-    subtitle="Monte Carlo Empirical Variance Bands Across 100 Independent Runs"
-)
-```
-
----
-
-### 9. `render_multi_metric_radar`
-*Orthogonal multi-criteria evaluation radar normalized against target baselines.*
-
-![Multi-Metric Radar](assets/gallery/09_radar_chart.png)
-
-```python
-render_multi_metric_radar(
-    title="ORTHOGONAL SYSTEM PERFORMANCE RADAR",
-    axes=["Accuracy", "Throughput", "Latency", "Robustness", "Efficiency"]
-)
-```
-
----
-
-### 10. `render_dual_code_inspector`
-*Synchronized dual-pane view: syntax-highlighted execution pointer + live heap symbol table.*
-
-![Dual Code Inspector](assets/gallery/10_dual_code_inspector.png)
-
-```python
-render_dual_code_inspector(
-    code_snippet='def solve_equilibrium(state, external_force):\n    """Compute adaptive damping torque."""\n    accel = (external_force - state.pos * 9.8) / state.mass\n    torque = Kp * state.error - Kd * state.vel\n    return torque',
-    memory_slots=[
-        {"var": "state.pos", "val": "1.047 rad", "addr": "0xHEAP01", "status": "ACTIVE"},
-        {"var": "state.vel", "val": "0.002 rad/s", "addr": "0xHEAP02", "status": "ACTIVE"},
-        {"var": "torque_cmd", "val": "13.25 N*m", "addr": "0xHEAP03", "status": "ACCUMULATED"}
-    ],
-    title="DUAL CODE & RUNTIME MEMORY INSPECTOR",
-    active_line=4
-)
-```
-
----
-
-### 11. `render_cyber_academic_dashboard_layout`
-*Multi-pane split dashboard integrating 3D visualizations, analytical side panels, and telemetry.*
-
-![Cyber Dashboard](assets/gallery/11_cyber_dashboard.png)
-
-```python
-render_cyber_academic_dashboard_layout(
-    scene_kicker="TELEMETRY // COMPUTATIONAL DASHBOARD",
-    scene_title="Nonlinear Dynamic System Stability Monitor",
-    status_badge="STABILITY: ASYMPTOTIC // 500Hz",
-    main_component_html=render_loss_landscape_3d("PARAMETRIC LOSS SURFACE", "Non-Convex Gradient Field"),
-    side_panel_html="...",
-    bottom_telemetry_html="<span>BUS FREQ: 500Hz</span><span>PHASE MARGIN: 48.2°</span>"
-)
-```
-
----
-
-### 12. `render_triptych_pipeline_layout`
-*Modular 3-stage computational pipeline layout with high-speed data bus telemetry.*
-
-![Triptych Pipeline](assets/gallery/12_triptych_pipeline.png)
-
-```python
-render_triptych_pipeline_layout(
-    scene_kicker="ARCHITECTURE // PIPELINE TOPOLOGY",
-    scene_title="Sense-Plan-Act Synchronous Computing Architecture",
-    stages=[
-        {"num": "STAGE 01", "name": "Sensory Acquisition", "tag": "MULTIMODAL ENCODER", "desc": "Sub-millimeter optical joint encoders and 6-axis force-torque sensor array.", "metrics": {"RATE": "500Hz", "PRECISION": "0.01mm"}, "color": "#38BDF8"},
-        {"num": "STAGE 02", "name": "Trajectory Planning", "tag": "QP-MPC SOLVER", "desc": "Realtime convex quadratic program trajectory optimization with collision corridors.", "metrics": {"HORIZON": "50 STEPS", "LATENCY": "12ms"}, "color": "#6366F1"},
-        {"num": "STAGE 03", "name": "Torque Servo Loop", "tag": "IMPEDANCE CONTROL", "desc": "Hard-realtime joint motor current controller executing compliance reflexes.", "metrics": {"LOOP": "1000Hz", "BANDWIDTH": "1200 rad/s"}, "color": "#10B981"}
-    ],
-    interconnect_label="SYNCHRONOUS DATA BUS // 500Hz"
-)
-```
-
----
-
-### 13. `render_loss_landscape_3d`
-*3D parametric non-convex objective manifold with gradient descent trajectories & contour rings.*
-
-![Loss Landscape 3D](assets/gallery/13_loss_landscape_3d.png)
-
-```python
-render_loss_landscape_3d(
-    title="3D PARAMETRIC LOSS MANIFOLD",
-    subtitle="Non-Convex Energy Surface with Saddle-Point Trajectories",
-    contour_levels=14,
-    accent="#6366F1"
-)
-```
-
----
-
-### 14. `render_teachable_reservoir_valve`
-*Physical hydraulic reservoir & throttle valve metaphor for gradient accumulation & learning rate decay.*
-
-![Teachable Reservoir Valve](assets/gallery/14_teachable_reservoir_valve.png)
-
-```python
-render_teachable_reservoir_valve(
-    title="HYDRAULIC RESERVOIR & GATED THROTTLE",
-    subtitle="Physical Intuition for Gradient Accumulation & Flow Dissipation",
-    reservoir_level_pct=68,
-    valve_aperture_pct=42
-)
-```
-
----
-
-### 15. `render_top_formula_bottom_dynamic_layout`
-*Mathematical deduction formula banner with synchronized dynamic simulation/geometric deformation below.*
-
-![Top Formula Bottom Dynamic](assets/gallery/15_top_formula_bottom_dynamic.png)
-
-```python
-render_top_formula_bottom_dynamic_layout(
-    scene_kicker="AXIOM // EQUATIONS OF MOTION",
-    scene_title="Lagrangian Mechanics Formulation",
-    formula_latex=r"\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) - \frac{\partial \mathcal{L}}{\partial q_i} = \tau_i",
-    formula_explanation="The Euler-Lagrange equations establish the fundamental connection between variational stationary action and robotic generalized coordinates.",
-    dynamic_component_html=render_matrix_transformation_2d(title="GENERALIZED COORDINATE MAPPING", subtitle="Tangent Space Basis Deformation")
-)
-```
-
----
-
-### 16. `render_quad_comparison_layout`
-*2x2 Quad ablation matrix for empirical comparisons, baseline studies & model architecture benchmarks.*
-
-![Quad Comparison Matrix](assets/gallery/16_quad_comparison_matrix.png)
-
-```python
-render_quad_comparison_layout(
-    scene_kicker="ABLATION // EMPIRICAL BENCHMARK",
-    scene_title="Ablation Analysis Across System Architectures",
-    quad_cards=[
-        {"title": "Baseline Rigid", "badge": "CONFIG A", "desc": "Fixed-gain classical PID with rigid link assumption.", "stat_val": "24.2 ms", "stat_label": "TRACKING ERROR", "color": "#64748B"},
-        {"title": "Admittance Hybrid", "badge": "CONFIG B", "desc": "Outer admittance loop with direct velocity feedforward.", "stat_val": "11.8 ms", "stat_label": "SETTLING TIME", "color": "#38BDF8"},
-        {"title": "Impedance + MPC", "badge": "CONFIG C", "desc": "Convex quadratic programming with constraint corridor.", "stat_val": "4.1 ms", "stat_label": "SOLVER LATENCY", "color": "#6366F1"},
-        {"title": "Full Sensorimotor VLA", "badge": "PROPOSED", "desc": "End-to-end vision-language-action cross-attention token policy.", "stat_val": "98.7%", "stat_label": "SUCCESS RATE", "color": "#10B981"}
-    ]
-)
-```
-
----
-
-### 17. `render_scientific_terminal_card`
-*Sci-fi / academic telemetry terminal window wrapper with status badges & custom metric dictionaries.*
-
-![Scientific Terminal Card](assets/gallery/17_scientific_terminal_card.png)
-
-```python
-render_scientific_terminal_card(
-    inner_content_html=render_optimization_contour_paths(title="OPTIMIZER STEP DYNAMICS", subtitle="Realtime Gradient Descent Trace"),
-    status_tag="SIMULATION: CONVERGED // 1000 FPS",
-    telemetry={"SOLVER": "QP-ACTIVE-SET", "ITERATIONS": "42", "KKT_TOL": "1e-6", "EIGEN_MAX": "8.42"},
-    title="TELEMETRY DEBUG TERMINAL"
-)
-```
-
----
-
-### 18. `render_quantum_bloch_circuit`
-*Qiskit-styled 3D Bloch sphere ($|0\rangle, |1\rangle, |\psi\rangle$) with multi-qubit circuit gate sequence (H, X, CNOT, Phase, Measure).*
-
-![Quantum Bloch Circuit](assets/gallery/18_quantum_bloch_circuit.png)
-
-```python
-render_quantum_bloch_circuit(
-    vector=(0.35, 0.61, 0.71),
-    theta_deg=45.0,
-    phi_deg=60.0,
-    title="QUANTUM BLOCH SPHERE & CIRCUIT TELEMETRY",
-    subtitle="Unitary State Vector Rotation & Multi-Qubit Gate Sequence"
-)
-```
-
----
-
-### 19. `render_bode_nyquist_frequency_plot`
-*Classical control frequency response: dual Bode log magnitude/phase paired with complex Nyquist stability contour encircling $(-1, 0)$.*
-
-![Bode Nyquist Frequency](assets/gallery/19_bode_nyquist_frequency.png)
-
-```python
-render_bode_nyquist_frequency_plot(
-    title="BODE GAIN/PHASE & NYQUIST CONTOUR",
-    subtitle="Frequency Domain Stability Margins Encircling (-1, 0)",
-    gain_margin_db=14.2,
-    phase_margin_deg=48.6
-)
-```
-
----
-
-### 20. `render_graph_network_topology`
-*Graph Neural Network (GNN) and Knowledge Graph message-passing topology with radiant hubs, directional message arcs, and cluster halos.*
-
-![Graph Network Topology](assets/gallery/20_graph_network_topology.png)
-
-```python
-render_graph_network_topology(
-    title="GNN MESSAGE-PASSING TOPOLOGY",
-    subtitle="Heterogeneous Graph Node Embeddings & Directed Attention Flow"
-)
-```
-
----
-
-### 21. `render_genomic_sequence_ribbon`
-*Bioinformatics sequence analysis: WebLogo information entropy stack (0-2.0 bits) paired with annotated linear open reading frame tracks.*
-
-![Genomic Sequence Ribbon](assets/gallery/21_genomic_sequence_ribbon.png)
-
-```python
-render_genomic_sequence_ribbon(
-    title="GENOMIC SEQUENCE MOTIF & FEATURE TRACK",
-    subtitle="WebLogo Information Bits Stack & Annotated Open Reading Frame Tracks"
-)
-```
-
----
-
-### 22. `render_dag_workflow_statechart`
-*Distributed workflow DAG orchestration pipeline with task lifecycle states (queued, running, success, failed) and orthogonal dependency routing.*
-
-![DAG Workflow Statechart](assets/gallery/22_dag_workflow_statechart.png)
-
-```python
-render_dag_workflow_statechart(
-    title="DISTRIBUTED WORKFLOW DAG PIPELINE",
-    subtitle="Layered Task Lifecycle Execution States with Orthogonal Routing"
-)
-```
-
----
-
-### 23. `render_molecule_reaction_scheme`
-*RDKit 2D chemical structure & reaction scheme: 30°/90° skeletal bonds, stereochemical wedges, CPK heteroatom colors, and catalysis conditions.*
-
-![Molecule Reaction Scheme](assets/gallery/23_molecule_reaction.png)
-
-```python
-render_molecule_reaction_scheme(
-    title="RDKIT CHEMICAL REACTION & MOLECULAR TOPOLOGY",
-    subtitle="2D Kekule Skeletal Bonds with Stereochemical Wedges and Reagent Catalysis",
-    reagents="Pd(OAc)2, P(o-tol)3 // NEt3, 100°C",
-    yield_pct="94% YIELD"
-)
-```
-
----
-
-### 24. `render_synodic_lagrange_orbit`
-*Astropy/Poliastro CR3BP synodic rotating frame: primary bodies at $(-\mu, 0)$ and $(1-\mu, 0)$, L1-L5 equilibrium Lagrange points, Jacobi zero-velocity curves, and periodic Lyapunov halo orbit.*
-
-![Synodic Lagrange Orbit](assets/gallery/24_synodic_lagrange_orbit.png)
-
-```python
-render_synodic_lagrange_orbit(
-    title="CR3BP SYNODIC ORBITS & LAGRANGE POINTS",
-    subtitle="Rotating Frame with Jacobi Energy Contours, L1-L5 Points & Lyapunov Halo Orbit",
-    mu=0.01215
-)
-```
-
----
-
-### 25. `render_smith_eye_pair`
-*RF & microwave engineering: scikit-rf Smith Chart with constant-resistance circles, constant-reactance arcs, VSWR circle, paired with a 2-UI communication serial Eye Diagram and hexagonal keep-out mask.*
-
-![Smith Eye Pair](assets/gallery/25_smith_eye_pair.png)
-
-```python
-render_smith_eye_pair(
-    title="MICROWAVE SMITH CHART & SERIAL EYE DIAGRAM",
-    subtitle="Complex S11 Reflection Trajectory on Unit Circle with 2-UI Serial Eye Mask",
-    vswr=1.25,
-    q_factor=8.4
-)
-```
-
----
-
-### 26. `render_feynman_diagram_interaction`
-*High-energy particle physics: TikZ-Feynman / PyFeyn QED s-channel electron-positron annihilation via virtual gauge photon propagator into a muon pair.*
-
-![Feynman Diagram](assets/gallery/26_feynman_diagram.png)
-
-```python
-render_feynman_diagram_interaction(
-    title="QED FEYNMAN PARTICLE INTERACTION",
-    subtitle="s-Channel Electron-Positron Annihilation via Virtual Gauge Boson Propagator",
-    coupling_const="α = 1/137.036 (Fine Structure)"
-)
-```
-
-
+# FigureAtlas gallery
+
+Three hundred verified figure types for papers, slides, posters, and video frames.
+Each card below is a screenshot captured during verification, not a placeholder.
+
+The first 26 specialized renderers remain in the original gallery.
+The atlas adds the chart, diagram, map, and illustration grammars used to reach 300.
+
+## Format adapters
+
+版式与跨媒介适配。18 figures.
+
+| <div align="center"><b>001 Cinematic title cover</b><br/><img src="assets/gallery/atlas/001_hero-cover.png" width="360" alt="Cinematic title cover"/><br/><sub>电影级封面</sub></div> | <div align="center"><b>002 Split analytical dashboard</b><br/><img src="assets/gallery/atlas/002_dashboard.png" width="360" alt="Split analytical dashboard"/><br/><sub>赛博多栏仪表盘</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>003 Theorem above, dynamics below</b><br/><img src="assets/gallery/atlas/003_formula-dynamic.png" width="360" alt="Theorem above, dynamics below"/><br/><sub>上公式下动态</sub></div> | <div align="center"><b>004 Four-cell comparison board</b><br/><img src="assets/gallery/atlas/004_quad-compare.png" width="360" alt="Four-cell comparison board"/><br/><sub>四象限对照</sub></div> |
+| <div align="center"><b>005 Telemetry terminal card</b><br/><img src="assets/gallery/atlas/005_terminal-card.png" width="360" alt="Telemetry terminal card"/><br/><sub>科学终端卡片</sub></div> | <div align="center"><b>006 Journal single column</b><br/><img src="assets/gallery/atlas/006_journal-single.png" width="360" alt="Journal single column"/><br/><sub>期刊单栏框</sub></div> |
+| <div align="center"><b>007 Journal double column</b><br/><img src="assets/gallery/atlas/007_journal-double.png" width="360" alt="Journal double column"/><br/><sub>期刊双栏框</sub></div> | <div align="center"><b>008 Multipanel A–F plate</b><br/><img src="assets/gallery/atlas/008_panel-labels.png" width="360" alt="Multipanel A–F plate"/><br/><sub>分面板标号</sub></div> |
+| <div align="center"><b>009 Slide 16:9 safe area</b><br/><img src="assets/gallery/atlas/009_slide-16x9.png" width="360" alt="Slide 16:9 safe area"/><br/><sub>幻灯片 16:9 安全区</sub></div> | <div align="center"><b>010 Slide 4:3 safe area</b><br/><img src="assets/gallery/atlas/010_slide-4x3.png" width="360" alt="Slide 4:3 safe area"/><br/><sub>幻灯片 4:3 安全区</sub></div> |
+| <div align="center"><b>011 A0 poster module</b><br/><img src="assets/gallery/atlas/011_poster-a0.png" width="360" alt="A0 poster module"/><br/><sub>A0 海报模块</sub></div> | <div align="center"><b>012 Graphical abstract slot</b><br/><img src="assets/gallery/atlas/012_graphical-slot.png" width="360" alt="Graphical abstract slot"/><br/><sub>图形摘要画幅</sub></div> |
+| <div align="center"><b>013 1080p lower-third frame</b><br/><img src="assets/gallery/atlas/013_video-lower-third.png" width="360" alt="1080p lower-third frame"/><br/><sub>视频下三分栏</sub></div> | <div align="center"><b>014 Inset magnification</b><br/><img src="assets/gallery/atlas/014_inset-zoom.png" width="360" alt="Inset magnification"/><br/><sub>局部放大</sub></div> |
+| <div align="center"><b>015 Before / after split</b><br/><img src="assets/gallery/atlas/015_before-after.png" width="360" alt="Before / after split"/><br/><sub>前后分屏</sub></div> | <div align="center"><b>016 Caption and scale bar</b><br/><img src="assets/gallery/atlas/016_caption-scale.png" width="360" alt="Caption and scale bar"/><br/><sub>图注与比例尺</sub></div> |
+| <div align="center"><b>017 Methods side rail</b><br/><img src="assets/gallery/atlas/017_method-rail.png" width="360" alt="Methods side rail"/><br/><sub>方法侧栏</sub></div> | <div align="center"><b>018 Figure plate grid</b><br/><img src="assets/gallery/atlas/018_plate-grid.png" width="360" alt="Figure plate grid"/><br/><sub>多图拼版网格</sub></div> |
+
+## Distribution and comparison
+
+分布、排序与组间比较。28 figures.
+
+| <div align="center"><b>019 Mean with confidence band</b><br/><img src="assets/gallery/atlas/019_confidence-band.png" width="360" alt="Mean with confidence band"/><br/><sub>置信带</sub></div> | <div align="center"><b>020 Multi-metric radar</b><br/><img src="assets/gallery/atlas/020_radar.png" width="360" alt="Multi-metric radar"/><br/><sub>多指标雷达</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>021 Histogram</b><br/><img src="assets/gallery/atlas/021_histogram.png" width="360" alt="Histogram"/><br/><sub>直方图</sub></div> | <div align="center"><b>022 Density curve</b><br/><img src="assets/gallery/atlas/022_density.png" width="360" alt="Density curve"/><br/><sub>密度曲线</sub></div> |
+| <div align="center"><b>023 Ridgeline densities</b><br/><img src="assets/gallery/atlas/023_ridge.png" width="360" alt="Ridgeline densities"/><br/><sub>山脊图</sub></div> | <div align="center"><b>024 Box plot</b><br/><img src="assets/gallery/atlas/024_boxplot.png" width="360" alt="Box plot"/><br/><sub>箱线图</sub></div> |
+| <div align="center"><b>025 Violin plot</b><br/><img src="assets/gallery/atlas/025_violin.png" width="360" alt="Violin plot"/><br/><sub>小提琴图</sub></div> | <div align="center"><b>026 Raincloud plot</b><br/><img src="assets/gallery/atlas/026_raincloud.png" width="360" alt="Raincloud plot"/><br/><sub>雨云图</sub></div> |
+| <div align="center"><b>027 Beeswarm</b><br/><img src="assets/gallery/atlas/027_beeswarm.png" width="360" alt="Beeswarm"/><br/><sub>蜂群图</sub></div> | <div align="center"><b>028 Jitter over box</b><br/><img src="assets/gallery/atlas/028_jitter-box.png" width="360" alt="Jitter over box"/><br/><sub>抖动散点加箱线</sub></div> |
+| <div align="center"><b>029 Empirical CDF</b><br/><img src="assets/gallery/atlas/029_ecdf.png" width="360" alt="Empirical CDF"/><br/><sub>经验累积分布</sub></div> | <div align="center"><b>030 Q-Q plot</b><br/><img src="assets/gallery/atlas/030_qq.png" width="360" alt="Q-Q plot"/><br/><sub>Q-Q 图</sub></div> |
+| <div align="center"><b>031 Grouped bars</b><br/><img src="assets/gallery/atlas/031_grouped-bar.png" width="360" alt="Grouped bars"/><br/><sub>分组柱状图</sub></div> | <div align="center"><b>032 Stacked bars</b><br/><img src="assets/gallery/atlas/032_stacked-bar.png" width="360" alt="Stacked bars"/><br/><sub>堆叠柱状图</sub></div> |
+| <div align="center"><b>033 100% stacked bars</b><br/><img src="assets/gallery/atlas/033_percent-bar.png" width="360" alt="100% stacked bars"/><br/><sub>百分比堆叠柱</sub></div> | <div align="center"><b>034 Lollipop ranking</b><br/><img src="assets/gallery/atlas/034_lollipop.png" width="360" alt="Lollipop ranking"/><br/><sub>棒棒糖图</sub></div> |
+| <div align="center"><b>035 Dumbbell comparison</b><br/><img src="assets/gallery/atlas/035_dumbbell.png" width="360" alt="Dumbbell comparison"/><br/><sub>哑铃图</sub></div> | <div align="center"><b>036 Cleveland dot plot</b><br/><img src="assets/gallery/atlas/036_cleveland.png" width="360" alt="Cleveland dot plot"/><br/><sub>克利夫兰点图</sub></div> |
+| <div align="center"><b>037 Waterfall</b><br/><img src="assets/gallery/atlas/037_waterfall.png" width="360" alt="Waterfall"/><br/><sub>瀑布图</sub></div> | <div align="center"><b>038 Funnel</b><br/><img src="assets/gallery/atlas/038_funnel.png" width="360" alt="Funnel"/><br/><sub>漏斗图</sub></div> |
+| <div align="center"><b>039 Bullet chart</b><br/><img src="assets/gallery/atlas/039_bullet.png" width="360" alt="Bullet chart"/><br/><sub>子弹图</sub></div> | <div align="center"><b>040 Population pyramid</b><br/><img src="assets/gallery/atlas/040_pyramid.png" width="360" alt="Population pyramid"/><br/><sub>人口金字塔</sub></div> |
+| <div align="center"><b>041 Slope chart</b><br/><img src="assets/gallery/atlas/041_slope.png" width="360" alt="Slope chart"/><br/><sub>斜率图</sub></div> | <div align="center"><b>042 Forest plot</b><br/><img src="assets/gallery/atlas/042_forest.png" width="360" alt="Forest plot"/><br/><sub>森林图</sub></div> |
+| <div align="center"><b>043 Mean and error bar</b><br/><img src="assets/gallery/atlas/043_error-bar.png" width="360" alt="Mean and error bar"/><br/><sub>均值误差条</sub></div> | <div align="center"><b>044 Point range</b><br/><img src="assets/gallery/atlas/044_point-range.png" width="360" alt="Point range"/><br/><sub>点范围图</sub></div> |
+| <div align="center"><b>045 Notched box plot</b><br/><img src="assets/gallery/atlas/045_notched-box.png" width="360" alt="Notched box plot"/><br/><sub>缺口箱线图</sub></div> | <div align="center"><b>046 Significance brackets</b><br/><img src="assets/gallery/atlas/046_sig-brackets.png" width="360" alt="Significance brackets"/><br/><sub>显著性括号</sub></div> |
+
+## Correlation and dimension reduction
+
+相关、矩阵与降维。20 figures.
+
+| <div align="center"><b>047 Scatter plot</b><br/><img src="assets/gallery/atlas/047_scatter.png" width="360" alt="Scatter plot"/><br/><sub>散点图</sub></div> | <div align="center"><b>048 Bubble plot</b><br/><img src="assets/gallery/atlas/048_bubble.png" width="360" alt="Bubble plot"/><br/><sub>气泡图</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>049 Hexbin</b><br/><img src="assets/gallery/atlas/049_hexbin.png" width="360" alt="Hexbin"/><br/><sub>六边形分箱</sub></div> | <div align="center"><b>050 2D density</b><br/><img src="assets/gallery/atlas/050_density-2d.png" width="360" alt="2D density"/><br/><sub>二维密度</sub></div> |
+| <div align="center"><b>051 Contour plot</b><br/><img src="assets/gallery/atlas/051_contour.png" width="360" alt="Contour plot"/><br/><sub>等高线</sub></div> | <div align="center"><b>052 Correlation matrix</b><br/><img src="assets/gallery/atlas/052_corr-matrix.png" width="360" alt="Correlation matrix"/><br/><sub>相关矩阵</sub></div> |
+| <div align="center"><b>053 Clustered heatmap</b><br/><img src="assets/gallery/atlas/053_cluster-heat.png" width="360" alt="Clustered heatmap"/><br/><sub>聚类热图</sub></div> | <div align="center"><b>054 Annotated heatmap</b><br/><img src="assets/gallery/atlas/054_annot-heat.png" width="360" alt="Annotated heatmap"/><br/><sub>注释热图</sub></div> |
+| <div align="center"><b>055 Triangular correlation</b><br/><img src="assets/gallery/atlas/055_tri-corr.png" width="360" alt="Triangular correlation"/><br/><sub>三角相关图</sub></div> | <div align="center"><b>056 Scatterplot matrix</b><br/><img src="assets/gallery/atlas/056_splom.png" width="360" alt="Scatterplot matrix"/><br/><sub>散点矩阵</sub></div> |
+| <div align="center"><b>057 PCA biplot</b><br/><img src="assets/gallery/atlas/057_pca-biplot.png" width="360" alt="PCA biplot"/><br/><sub>PCA 双标图</sub></div> | <div align="center"><b>058 UMAP embedding</b><br/><img src="assets/gallery/atlas/058_umap.png" width="360" alt="UMAP embedding"/><br/><sub>UMAP</sub></div> |
+| <div align="center"><b>059 t-SNE embedding</b><br/><img src="assets/gallery/atlas/059_tsne.png" width="360" alt="t-SNE embedding"/><br/><sub>t-SNE</sub></div> | <div align="center"><b>060 Parallel coordinates</b><br/><img src="assets/gallery/atlas/060_parallel.png" width="360" alt="Parallel coordinates"/><br/><sub>平行坐标</sub></div> |
+| <div align="center"><b>061 Bland-Altman</b><br/><img src="assets/gallery/atlas/061_bland-altman.png" width="360" alt="Bland-Altman"/><br/><sub>Bland-Altman</sub></div> | <div align="center"><b>062 Residual plot</b><br/><img src="assets/gallery/atlas/062_residual.png" width="360" alt="Residual plot"/><br/><sub>残差图</sub></div> |
+| <div align="center"><b>063 ROC curve</b><br/><img src="assets/gallery/atlas/063_roc.png" width="360" alt="ROC curve"/><br/><sub>ROC 曲线</sub></div> | <div align="center"><b>064 Precision-recall curve</b><br/><img src="assets/gallery/atlas/064_pr-curve.png" width="360" alt="Precision-recall curve"/><br/><sub>PR 曲线</sub></div> |
+| <div align="center"><b>065 Calibration curve</b><br/><img src="assets/gallery/atlas/065_calibration.png" width="360" alt="Calibration curve"/><br/><sub>校准曲线</sub></div> | <div align="center"><b>066 Thresholded correlation network</b><br/><img src="assets/gallery/atlas/066_corr-network.png" width="360" alt="Thresholded correlation network"/><br/><sub>阈值化相关网络</sub></div> |
+
+## Time and process
+
+时间、过程与实验序列。16 figures.
+
+| <div align="center"><b>067 Line chart</b><br/><img src="assets/gallery/atlas/067_line.png" width="360" alt="Line chart"/><br/><sub>折线图</sub></div> | <div align="center"><b>068 Multi-series line</b><br/><img src="assets/gallery/atlas/068_multiline.png" width="360" alt="Multi-series line"/><br/><sub>多序列折线</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>069 Area chart</b><br/><img src="assets/gallery/atlas/069_area.png" width="360" alt="Area chart"/><br/><sub>面积图</sub></div> | <div align="center"><b>070 Stacked area</b><br/><img src="assets/gallery/atlas/070_stacked-area.png" width="360" alt="Stacked area"/><br/><sub>堆叠面积</sub></div> |
+| <div align="center"><b>071 Streamgraph</b><br/><img src="assets/gallery/atlas/071_stream.png" width="360" alt="Streamgraph"/><br/><sub>河流图</sub></div> | <div align="center"><b>072 Step chart</b><br/><img src="assets/gallery/atlas/072_step.png" width="360" alt="Step chart"/><br/><sub>阶梯图</sub></div> |
+| <div align="center"><b>073 Sparkline row</b><br/><img src="assets/gallery/atlas/073_sparkline.png" width="360" alt="Sparkline row"/><br/><sub>火花线</sub></div> | <div align="center"><b>074 Autocorrelation</b><br/><img src="assets/gallery/atlas/074_acf.png" width="360" alt="Autocorrelation"/><br/><sub>自相关</sub></div> |
+| <div align="center"><b>075 Partial autocorrelation</b><br/><img src="assets/gallery/atlas/075_pacf.png" width="360" alt="Partial autocorrelation"/><br/><sub>偏自相关</sub></div> | <div align="center"><b>076 Kaplan-Meier curve</b><br/><img src="assets/gallery/atlas/076_kaplan-meier.png" width="360" alt="Kaplan-Meier curve"/><br/><sub>Kaplan-Meier</sub></div> |
+| <div align="center"><b>077 Cumulative incidence</b><br/><img src="assets/gallery/atlas/077_cuminc.png" width="360" alt="Cumulative incidence"/><br/><sub>累积发生率</sub></div> | <div align="center"><b>078 Gantt chart</b><br/><img src="assets/gallery/atlas/078_gantt.png" width="360" alt="Gantt chart"/><br/><sub>甘特图</sub></div> |
+| <div align="center"><b>079 Seasonal decomposition</b><br/><img src="assets/gallery/atlas/079_seasonal.png" width="360" alt="Seasonal decomposition"/><br/><sub>季节分解</sub></div> | <div align="center"><b>080 Forecast fan</b><br/><img src="assets/gallery/atlas/080_fan-forecast.png" width="360" alt="Forecast fan"/><br/><sub>扇形预测带</sub></div> |
+| <div align="center"><b>081 Change-point chart</b><br/><img src="assets/gallery/atlas/081_changepoint.png" width="360" alt="Change-point chart"/><br/><sub>变点图</sub></div> | <div align="center"><b>082 Process control chart</b><br/><img src="assets/gallery/atlas/082_spc.png" width="360" alt="Process control chart"/><br/><sub>过程控制图</sub></div> |
+
+## Part-to-whole and sets
+
+构成、集合与层级。14 figures.
+
+| <div align="center"><b>083 Pie chart</b><br/><img src="assets/gallery/atlas/083_pie.png" width="360" alt="Pie chart"/><br/><sub>饼图</sub></div> | <div align="center"><b>084 Donut chart</b><br/><img src="assets/gallery/atlas/084_donut.png" width="360" alt="Donut chart"/><br/><sub>环形图</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>085 Sunburst</b><br/><img src="assets/gallery/atlas/085_sunburst.png" width="360" alt="Sunburst"/><br/><sub>旭日图</sub></div> | <div align="center"><b>086 Treemap</b><br/><img src="assets/gallery/atlas/086_treemap.png" width="360" alt="Treemap"/><br/><sub>矩形树图</sub></div> |
+| <div align="center"><b>087 Icicle chart</b><br/><img src="assets/gallery/atlas/087_icicle.png" width="360" alt="Icicle chart"/><br/><sub>冰柱图</sub></div> | <div align="center"><b>088 Circle packing</b><br/><img src="assets/gallery/atlas/088_circle-pack.png" width="360" alt="Circle packing"/><br/><sub>圆堆积</sub></div> |
+| <div align="center"><b>089 Waffle chart</b><br/><img src="assets/gallery/atlas/089_waffle.png" width="360" alt="Waffle chart"/><br/><sub>华夫图</sub></div> | <div align="center"><b>090 Mosaic plot</b><br/><img src="assets/gallery/atlas/090_mosaic.png" width="360" alt="Mosaic plot"/><br/><sub>马赛克图</sub></div> |
+| <div align="center"><b>091 Mekko chart</b><br/><img src="assets/gallery/atlas/091_mekko.png" width="360" alt="Mekko chart"/><br/><sub>梅科图</sub></div> | <div align="center"><b>092 Venn diagram</b><br/><img src="assets/gallery/atlas/092_venn.png" width="360" alt="Venn diagram"/><br/><sub>维恩图</sub></div> |
+| <div align="center"><b>093 UpSet plot</b><br/><img src="assets/gallery/atlas/093_upset.png" width="360" alt="UpSet plot"/><br/><sub>UpSet</sub></div> | <div align="center"><b>094 Euler diagram</b><br/><img src="assets/gallery/atlas/094_euler.png" width="360" alt="Euler diagram"/><br/><sub>欧拉图</sub></div> |
+| <div align="center"><b>095 Proportional area</b><br/><img src="assets/gallery/atlas/095_proportional-area.png" width="360" alt="Proportional area"/><br/><sub>比例面积图</sub></div> | <div align="center"><b>096 Nested donut</b><br/><img src="assets/gallery/atlas/096_nested-donut.png" width="360" alt="Nested donut"/><br/><sub>嵌套环形图</sub></div> |
+
+## Networks and systems
+
+网络、流程与系统架构。25 figures.
+
+| <div align="center"><b>097 Heterogeneous graph</b><br/><img src="assets/gallery/atlas/097_graph-topology.png" width="360" alt="Heterogeneous graph"/><br/><sub>异质图拓扑</sub></div> | <div align="center"><b>098 Three-stage pipeline</b><br/><img src="assets/gallery/atlas/098_triptych.png" width="360" alt="Three-stage pipeline"/><br/><sub>三联流水线</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>099 DAG state chart</b><br/><img src="assets/gallery/atlas/099_dag-state.png" width="360" alt="DAG state chart"/><br/><sub>DAG 状态图</sub></div> | <div align="center"><b>100 Sankey diagram</b><br/><img src="assets/gallery/atlas/100_sankey.png" width="360" alt="Sankey diagram"/><br/><sub>桑基图</sub></div> |
+| <div align="center"><b>101 Alluvial diagram</b><br/><img src="assets/gallery/atlas/101_alluvial.png" width="360" alt="Alluvial diagram"/><br/><sub>冲积图</sub></div> | <div align="center"><b>102 Chord diagram</b><br/><img src="assets/gallery/atlas/102_chord.png" width="360" alt="Chord diagram"/><br/><sub>弦图</sub></div> |
+| <div align="center"><b>103 Arc diagram</b><br/><img src="assets/gallery/atlas/103_arc-diagram.png" width="360" alt="Arc diagram"/><br/><sub>弧线图</sub></div> | <div align="center"><b>104 Adjacency matrix</b><br/><img src="assets/gallery/atlas/104_adj-matrix.png" width="360" alt="Adjacency matrix"/><br/><sub>邻接矩阵</sub></div> |
+| <div align="center"><b>105 Force-directed network</b><br/><img src="assets/gallery/atlas/105_force-network.png" width="360" alt="Force-directed network"/><br/><sub>力导向网络</sub></div> | <div align="center"><b>106 Hierarchical edge bundling</b><br/><img src="assets/gallery/atlas/106_edge-bundle.png" width="360" alt="Hierarchical edge bundling"/><br/><sub>层次边绑定</sub></div> |
+| <div align="center"><b>107 Flowchart</b><br/><img src="assets/gallery/atlas/107_flowchart.png" width="360" alt="Flowchart"/><br/><sub>流程图</sub></div> | <div align="center"><b>108 Swimlane</b><br/><img src="assets/gallery/atlas/108_swimlane.png" width="360" alt="Swimlane"/><br/><sub>泳道图</sub></div> |
+| <div align="center"><b>109 Sequence diagram</b><br/><img src="assets/gallery/atlas/109_sequence.png" width="360" alt="Sequence diagram"/><br/><sub>时序图</sub></div> | <div align="center"><b>110 State machine</b><br/><img src="assets/gallery/atlas/110_state-machine.png" width="360" alt="State machine"/><br/><sub>状态机</sub></div> |
+| <div align="center"><b>111 BPMN process</b><br/><img src="assets/gallery/atlas/111_bpmn.png" width="360" alt="BPMN process"/><br/><sub>BPMN</sub></div> | <div align="center"><b>112 C4 context</b><br/><img src="assets/gallery/atlas/112_c4-context.png" width="360" alt="C4 context"/><br/><sub>C4 上下文</sub></div> |
+| <div align="center"><b>113 C4 container</b><br/><img src="assets/gallery/atlas/113_c4-container.png" width="360" alt="C4 container"/><br/><sub>C4 容器</sub></div> | <div align="center"><b>114 C4 component</b><br/><img src="assets/gallery/atlas/114_c4-component.png" width="360" alt="C4 component"/><br/><sub>C4 组件</sub></div> |
+| <div align="center"><b>115 Deployment diagram</b><br/><img src="assets/gallery/atlas/115_deploy.png" width="360" alt="Deployment diagram"/><br/><sub>部署图</sub></div> | <div align="center"><b>116 Entity-relationship diagram</b><br/><img src="assets/gallery/atlas/116_er.png" width="360" alt="Entity-relationship diagram"/><br/><sub>ER 图</sub></div> |
+| <div align="center"><b>117 Data lineage</b><br/><img src="assets/gallery/atlas/117_lineage.png" width="360" alt="Data lineage"/><br/><sub>数据血缘</sub></div> | <div align="center"><b>118 Mind map</b><br/><img src="assets/gallery/atlas/118_mindmap.png" width="360" alt="Mind map"/><br/><sub>思维导图</sub></div> |
+| <div align="center"><b>119 Fishbone diagram</b><br/><img src="assets/gallery/atlas/119_fishbone.png" width="360" alt="Fishbone diagram"/><br/><sub>鱼骨图</sub></div> | <div align="center"><b>120 Decision tree diagram</b><br/><img src="assets/gallery/atlas/120_decision-tree.png" width="360" alt="Decision tree diagram"/><br/><sub>决策树示意图</sub></div> |
+| <div align="center"><b>121 Wire harness</b><br/><img src="assets/gallery/atlas/121_wire-harness.png" width="360" alt="Wire harness"/><br/><sub>线束图</sub></div> |   |
+
+## Mathematics and derivation
+
+数学、几何与推导。18 figures.
+
+| <div align="center"><b>122 2D basis mapping</b><br/><img src="assets/gallery/atlas/122_matrix-map.png" width="360" alt="2D basis mapping"/><br/><sub>二维基底变换</sub></div> | <div align="center"><b>123 Stepwise derivation</b><br/><img src="assets/gallery/atlas/123_formula-derivation.png" width="360" alt="Stepwise derivation"/><br/><sub>公式分步推导</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>124 Number line and intervals</b><br/><img src="assets/gallery/atlas/124_number-line.png" width="360" alt="Number line and intervals"/><br/><sub>数轴与区间</sub></div> | <div align="center"><b>125 Complex plane</b><br/><img src="assets/gallery/atlas/125_complex-plane.png" width="360" alt="Complex plane"/><br/><sub>复平面</sub></div> |
+| <div align="center"><b>126 2D vector field</b><br/><img src="assets/gallery/atlas/126_vector-field-2d.png" width="360" alt="2D vector field"/><br/><sub>二维向量场</sub></div> | <div align="center"><b>127 Phase portrait</b><br/><img src="assets/gallery/atlas/127_phase-portrait.png" width="360" alt="Phase portrait"/><br/><sub>相图</sub></div> |
+| <div align="center"><b>128 Slope field</b><br/><img src="assets/gallery/atlas/128_slope-field.png" width="360" alt="Slope field"/><br/><sub>斜率场</sub></div> | <div align="center"><b>129 Riemann sums</b><br/><img src="assets/gallery/atlas/129_riemann.png" width="360" alt="Riemann sums"/><br/><sub>黎曼和</sub></div> |
+| <div align="center"><b>130 Taylor approximation</b><br/><img src="assets/gallery/atlas/130_taylor.png" width="360" alt="Taylor approximation"/><br/><sub>泰勒逼近</sub></div> | <div align="center"><b>131 Fourier synthesis</b><br/><img src="assets/gallery/atlas/131_fourier.png" width="360" alt="Fourier synthesis"/><br/><sub>傅里叶合成</sub></div> |
+| <div align="center"><b>132 Eigenvalue ellipse</b><br/><img src="assets/gallery/atlas/132_eigen-ellipse.png" width="360" alt="Eigenvalue ellipse"/><br/><sub>特征值椭圆</sub></div> | <div align="center"><b>133 SVD geometry</b><br/><img src="assets/gallery/atlas/133_svd-geometry.png" width="360" alt="SVD geometry"/><br/><sub>SVD 几何</sub></div> |
+| <div align="center"><b>134 Projection and least squares</b><br/><img src="assets/gallery/atlas/134_least-squares.png" width="360" alt="Projection and least squares"/><br/><sub>投影与最小二乘</sub></div> | <div align="center"><b>135 Convolution window</b><br/><img src="assets/gallery/atlas/135_convolution.png" width="360" alt="Convolution window"/><br/><sub>卷积滑窗</sub></div> |
+| <div align="center"><b>136 Probability tree</b><br/><img src="assets/gallery/atlas/136_probability-tree.png" width="360" alt="Probability tree"/><br/><sub>概率树</sub></div> | <div align="center"><b>137 Bayes update bars</b><br/><img src="assets/gallery/atlas/137_bayes-bars.png" width="360" alt="Bayes update bars"/><br/><sub>贝叶斯更新条</sub></div> |
+| <div align="center"><b>138 Unit-circle trigonometry</b><br/><img src="assets/gallery/atlas/138_unit-circle.png" width="360" alt="Unit-circle trigonometry"/><br/><sub>单位圆三角</sub></div> | <div align="center"><b>139 Geometric proof steps</b><br/><img src="assets/gallery/atlas/139_geometry-proof.png" width="360" alt="Geometric proof steps"/><br/><sub>几何证明分步</sub></div> |
+
+## Model structure and evaluation
+
+机器学习结构与评测。20 figures.
+
+| <div align="center"><b>140 3D tensor blocks</b><br/><img src="assets/gallery/atlas/140_tensor-3d.png" width="360" alt="3D tensor blocks"/><br/><sub>三维张量积木</sub></div> | <div align="center"><b>141 Attention heatmap</b><br/><img src="assets/gallery/atlas/141_attention.png" width="360" alt="Attention heatmap"/><br/><sub>注意力热图</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>142 Optimizer contours</b><br/><img src="assets/gallery/atlas/142_contour-opt.png" width="360" alt="Optimizer contours"/><br/><sub>优化等高线</sub></div> | <div align="center"><b>143 3D loss landscape</b><br/><img src="assets/gallery/atlas/143_loss-landscape.png" width="360" alt="3D loss landscape"/><br/><sub>三维损失曲面</sub></div> |
+| <div align="center"><b>144 Confusion matrix</b><br/><img src="assets/gallery/atlas/144_confusion.png" width="360" alt="Confusion matrix"/><br/><sub>混淆矩阵</sub></div> | <div align="center"><b>145 Learning curve</b><br/><img src="assets/gallery/atlas/145_learning-curve.png" width="360" alt="Learning curve"/><br/><sub>学习曲线</sub></div> |
+| <div align="center"><b>146 Validation curve</b><br/><img src="assets/gallery/atlas/146_validation-curve.png" width="360" alt="Validation curve"/><br/><sub>验证曲线</sub></div> | <div align="center"><b>147 Multi-model ROC</b><br/><img src="assets/gallery/atlas/147_multi-roc.png" width="360" alt="Multi-model ROC"/><br/><sub>多模型 ROC</sub></div> |
+| <div align="center"><b>148 SHAP beeswarm</b><br/><img src="assets/gallery/atlas/148_shap-beeswarm.png" width="360" alt="SHAP beeswarm"/><br/><sub>SHAP 蜂群</sub></div> | <div align="center"><b>149 SHAP waterfall</b><br/><img src="assets/gallery/atlas/149_shap-waterfall.png" width="360" alt="SHAP waterfall"/><br/><sub>SHAP 瀑布</sub></div> |
+| <div align="center"><b>150 Feature importance</b><br/><img src="assets/gallery/atlas/150_importance.png" width="360" alt="Feature importance"/><br/><sub>特征重要性</sub></div> | <div align="center"><b>151 Partial dependence</b><br/><img src="assets/gallery/atlas/151_pdp.png" width="360" alt="Partial dependence"/><br/><sub>部分依赖</sub></div> |
+| <div align="center"><b>152 ICE curves</b><br/><img src="assets/gallery/atlas/152_ice.png" width="360" alt="ICE curves"/><br/><sub>ICE 曲线</sub></div> | <div align="center"><b>153 Network block diagram</b><br/><img src="assets/gallery/atlas/153_nn-block.png" width="360" alt="Network block diagram"/><br/><sub>二维网络框图</sub></div> |
+| <div align="center"><b>154 U-Net skip connections</b><br/><img src="assets/gallery/atlas/154_unet.png" width="360" alt="U-Net skip connections"/><br/><sub>U-Net 跳跃连接</sub></div> | <div align="center"><b>155 Transformer block</b><br/><img src="assets/gallery/atlas/155_transformer-block.png" width="360" alt="Transformer block"/><br/><sub>Transformer 块</sub></div> |
+| <div align="center"><b>156 Token flow</b><br/><img src="assets/gallery/atlas/156_token-flow.png" width="360" alt="Token flow"/><br/><sub>词元流向</sub></div> | <div align="center"><b>157 Ablation bars</b><br/><img src="assets/gallery/atlas/157_ablation-bars.png" width="360" alt="Ablation bars"/><br/><sub>消融柱状图</sub></div> |
+| <div align="center"><b>158 Hyperparameter parallel axes</b><br/><img src="assets/gallery/atlas/158_hparam-parallel.png" width="360" alt="Hyperparameter parallel axes"/><br/><sub>超参平行坐标</sub></div> | <div align="center"><b>159 Grad-CAM overlay</b><br/><img src="assets/gallery/atlas/159_gradcam.png" width="360" alt="Grad-CAM overlay"/><br/><sub>Grad-CAM 叠图</sub></div> |
+
+## Life science and omics
+
+生命科学与组学。37 figures.
+
+| <div align="center"><b>160 Sequence logo and ORF track</b><br/><img src="assets/gallery/atlas/160_sequence-logo.png" width="360" alt="Sequence logo and ORF track"/><br/><sub>序列 logo 与阅读框</sub></div> | <div align="center"><b>161 Volcano plot</b><br/><img src="assets/gallery/atlas/161_volcano.png" width="360" alt="Volcano plot"/><br/><sub>火山图</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>162 MA plot</b><br/><img src="assets/gallery/atlas/162_ma-plot.png" width="360" alt="MA plot"/><br/><sub>MA 图</sub></div> | <div align="center"><b>163 Manhattan plot</b><br/><img src="assets/gallery/atlas/163_manhattan.png" width="360" alt="Manhattan plot"/><br/><sub>曼哈顿图</sub></div> |
+| <div align="center"><b>164 Genome-wide Q-Q</b><br/><img src="assets/gallery/atlas/164_gwas-qq.png" width="360" alt="Genome-wide Q-Q"/><br/><sub>全基因组 Q-Q</sub></div> | <div align="center"><b>165 Enrichment bubble</b><br/><img src="assets/gallery/atlas/165_enrich-bubble.png" width="360" alt="Enrichment bubble"/><br/><sub>富集气泡</sub></div> |
+| <div align="center"><b>166 Enrichment bars</b><br/><img src="assets/gallery/atlas/166_enrich-bar.png" width="360" alt="Enrichment bars"/><br/><sub>富集条形</sub></div> | <div align="center"><b>167 GSEA running score</b><br/><img src="assets/gallery/atlas/167_gsea.png" width="360" alt="GSEA running score"/><br/><sub>GSEA 跑分</sub></div> |
+| <div align="center"><b>168 Colored pathway</b><br/><img src="assets/gallery/atlas/168_pathway-color.png" width="360" alt="Colored pathway"/><br/><sub>通路着色</sub></div> | <div align="center"><b>169 GO directed graph</b><br/><img src="assets/gallery/atlas/169_go-dag.png" width="360" alt="GO directed graph"/><br/><sub>GO 有向无环</sub></div> |
+| <div align="center"><b>170 Circos rings</b><br/><img src="assets/gallery/atlas/170_circos.png" width="360" alt="Circos rings"/><br/><sub>Circos</sub></div> | <div align="center"><b>171 Chromosome ideogram</b><br/><img src="assets/gallery/atlas/171_ideogram.png" width="360" alt="Chromosome ideogram"/><br/><sub>染色体 ideogram</sub></div> |
+| <div align="center"><b>172 Genome browser track</b><br/><img src="assets/gallery/atlas/172_genome-track.png" width="360" alt="Genome browser track"/><br/><sub>基因组轨道</sub></div> | <div align="center"><b>173 Phylogenetic tree</b><br/><img src="assets/gallery/atlas/173_phylo.png" width="360" alt="Phylogenetic tree"/><br/><sub>系统发育树</sub></div> |
+| <div align="center"><b>174 Time tree</b><br/><img src="assets/gallery/atlas/174_timetree.png" width="360" alt="Time tree"/><br/><sub>时间树</sub></div> | <div align="center"><b>175 Tree with heatmap</b><br/><img src="assets/gallery/atlas/175_tree-heat.png" width="360" alt="Tree with heatmap"/><br/><sub>树加热图</sub></div> |
+| <div align="center"><b>176 Single-cell UMAP</b><br/><img src="assets/gallery/atlas/176_sc-umap.png" width="360" alt="Single-cell UMAP"/><br/><sub>单细胞 UMAP 分群</sub></div> | <div align="center"><b>177 Marker gene dot plot</b><br/><img src="assets/gallery/atlas/177_marker-dot.png" width="360" alt="Marker gene dot plot"/><br/><sub>标记基因点图</sub></div> |
+| <div align="center"><b>178 Stacked violins</b><br/><img src="assets/gallery/atlas/178_stacked-violin.png" width="360" alt="Stacked violins"/><br/><sub>堆叠小提琴</sub></div> | <div align="center"><b>179 Pseudotime</b><br/><img src="assets/gallery/atlas/179_pseudotime.png" width="360" alt="Pseudotime"/><br/><sub>拟时序</sub></div> |
+| <div align="center"><b>180 RNA velocity</b><br/><img src="assets/gallery/atlas/180_rna-velocity.png" width="360" alt="RNA velocity"/><br/><sub>RNA velocity</sub></div> | <div align="center"><b>181 Coverage track</b><br/><img src="assets/gallery/atlas/181_coverage.png" width="360" alt="Coverage track"/><br/><sub>覆盖度轨道</sub></div> |
+| <div align="center"><b>182 Protein lollipop</b><br/><img src="assets/gallery/atlas/182_domain-lollipop.png" width="360" alt="Protein lollipop"/><br/><sub>蛋白域棒棒糖</sub></div> | <div align="center"><b>183 Oncoprint</b><br/><img src="assets/gallery/atlas/183_oncoprint.png" width="360" alt="Oncoprint"/><br/><sub>Oncoprint</sub></div> |
+| <div align="center"><b>184 Copy-number heatmap</b><br/><img src="assets/gallery/atlas/184_cnv-heat.png" width="360" alt="Copy-number heatmap"/><br/><sub>拷贝数热图</sub></div> | <div align="center"><b>185 Microbiome composition</b><br/><img src="assets/gallery/atlas/185_micro-stack.png" width="360" alt="Microbiome composition"/><br/><sub>微生物组成堆叠</sub></div> |
+| <div align="center"><b>186 Alpha diversity</b><br/><img src="assets/gallery/atlas/186_alpha-div.png" width="360" alt="Alpha diversity"/><br/><sub>α 多样性</sub></div> | <div align="center"><b>187 PCoA / NMDS</b><br/><img src="assets/gallery/atlas/187_pcoa.png" width="360" alt="PCoA / NMDS"/><br/><sub>PCoA / NMDS</sub></div> |
+| <div align="center"><b>188 Co-occurrence network</b><br/><img src="assets/gallery/atlas/188_cooccur.png" width="360" alt="Co-occurrence network"/><br/><sub>共现网络</sub></div> | <div align="center"><b>189 Plasmid map</b><br/><img src="assets/gallery/atlas/189_plasmid.png" width="360" alt="Plasmid map"/><br/><sub>质粒图谱</sub></div> |
+| <div align="center"><b>190 Protein domain bar</b><br/><img src="assets/gallery/atlas/190_protein-domains.png" width="360" alt="Protein domain bar"/><br/><sub>蛋白结构域条</sub></div> | <div align="center"><b>191 Signaling sketch</b><br/><img src="assets/gallery/atlas/191_signal-cartoon.png" width="360" alt="Signaling sketch"/><br/><sub>信号通路简图</sub></div> |
+| <div align="center"><b>192 Organelle schematic</b><br/><img src="assets/gallery/atlas/192_organelle.png" width="360" alt="Organelle schematic"/><br/><sub>细胞器示意</sub></div> | <div align="center"><b>193 Wet-lab workflow</b><br/><img src="assets/gallery/atlas/193_wetlab-flow.png" width="360" alt="Wet-lab workflow"/><br/><sub>湿实验流程</sub></div> |
+| <div align="center"><b>194 Animal study timeline</b><br/><img src="assets/gallery/atlas/194_animal-timeline.png" width="360" alt="Animal study timeline"/><br/><sub>动物实验时间线</sub></div> | <div align="center"><b>195 Western blot schematic</b><br/><img src="assets/gallery/atlas/195_western.png" width="360" alt="Western blot schematic"/><br/><sub>蛋白印迹示意</sub></div> |
+| <div align="center"><b>196 Microscopy plate</b><br/><img src="assets/gallery/atlas/196_microscopy-plate.png" width="360" alt="Microscopy plate"/><br/><sub>显微镜多通道拼版</sub></div> |   |
+
+## Chemistry and materials
+
+化学与材料。17 figures.
+
+| <div align="center"><b>197 Reaction scheme</b><br/><img src="assets/gallery/atlas/197_reaction-scheme.png" width="360" alt="Reaction scheme"/><br/><sub>二维分子反应式</sub></div> | <div align="center"><b>198 Ball-and-stick model</b><br/><img src="assets/gallery/atlas/198_ball-stick.png" width="360" alt="Ball-and-stick model"/><br/><sub>球棍模型</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>199 Space-filling model</b><br/><img src="assets/gallery/atlas/199_spacefill.png" width="360" alt="Space-filling model"/><br/><sub>空间填充模型</sub></div> | <div align="center"><b>200 Electrostatic surface</b><br/><img src="assets/gallery/atlas/200_esp-surface.png" width="360" alt="Electrostatic surface"/><br/><sub>静电势表面</sub></div> |
+| <div align="center"><b>201 Orbital isosurface</b><br/><img src="assets/gallery/atlas/201_orbital.png" width="360" alt="Orbital isosurface"/><br/><sub>轨道等值面</sub></div> | <div align="center"><b>202 Reaction energy profile</b><br/><img src="assets/gallery/atlas/202_energy-profile.png" width="360" alt="Reaction energy profile"/><br/><sub>反应坐标能量曲线</sub></div> |
+| <div align="center"><b>203 Catalytic cycle</b><br/><img src="assets/gallery/atlas/203_catalytic-cycle.png" width="360" alt="Catalytic cycle"/><br/><sub>催化循环</sub></div> | <div align="center"><b>204 NMR spectrum</b><br/><img src="assets/gallery/atlas/204_nmr.png" width="360" alt="NMR spectrum"/><br/><sub>核磁谱</sub></div> |
+| <div align="center"><b>205 Mass spectrum</b><br/><img src="assets/gallery/atlas/205_mass-spec.png" width="360" alt="Mass spectrum"/><br/><sub>质谱</sub></div> | <div align="center"><b>206 Infrared spectrum</b><br/><img src="assets/gallery/atlas/206_ir-spec.png" width="360" alt="Infrared spectrum"/><br/><sub>红外谱</sub></div> |
+| <div align="center"><b>207 Powder XRD</b><br/><img src="assets/gallery/atlas/207_xrd.png" width="360" alt="Powder XRD"/><br/><sub>XRD</sub></div> | <div align="center"><b>208 Phase diagram</b><br/><img src="assets/gallery/atlas/208_phase-diagram.png" width="360" alt="Phase diagram"/><br/><sub>相图</sub></div> |
+| <div align="center"><b>209 Unit cell</b><br/><img src="assets/gallery/atlas/209_unit-cell.png" width="360" alt="Unit cell"/><br/><sub>晶胞</sub></div> | <div align="center"><b>210 Polymer repeat unit</b><br/><img src="assets/gallery/atlas/210_polymer.png" width="360" alt="Polymer repeat unit"/><br/><sub>聚合物重复单元</sub></div> |
+| <div align="center"><b>211 Cell cross-section</b><br/><img src="assets/gallery/atlas/211_battery-section.png" width="360" alt="Cell cross-section"/><br/><sub>电芯剖面</sub></div> | <div align="center"><b>212 Materials process flow</b><br/><img src="assets/gallery/atlas/212_process-flow.png" width="360" alt="Materials process flow"/><br/><sub>材料工艺流程</sub></div> |
+| <div align="center"><b>213 Dose versus structure</b><br/><img src="assets/gallery/atlas/213_dose-structure.png" width="360" alt="Dose versus structure"/><br/><sub>剂量-结构对照</sub></div> |   |
+
+## Physics, engineering, and signals
+
+物理、工程与信号。28 figures.
+
+| <div align="center"><b>214 3D streamlines</b><br/><img src="assets/gallery/atlas/214_streamlines-3d.png" width="360" alt="3D streamlines"/><br/><sub>三维流线</sub></div> | <div align="center"><b>215 Bloch sphere and circuit</b><br/><img src="assets/gallery/atlas/215_bloch.png" width="360" alt="Bloch sphere and circuit"/><br/><sub>量子布洛赫与线路</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>216 Lagrange orbit</b><br/><img src="assets/gallery/atlas/216_lagrange-orbit.png" width="360" alt="Lagrange orbit"/><br/><sub>拉格朗日轨道</sub></div> | <div align="center"><b>217 Feynman diagram</b><br/><img src="assets/gallery/atlas/217_feynman.png" width="360" alt="Feynman diagram"/><br/><sub>费曼图</sub></div> |
+| <div align="center"><b>218 Bode and Nyquist</b><br/><img src="assets/gallery/atlas/218_bode-nyquist.png" width="360" alt="Bode and Nyquist"/><br/><sub>Bode / Nyquist</sub></div> | <div align="center"><b>219 Smith chart and eye</b><br/><img src="assets/gallery/atlas/219_smith-eye.png" width="360" alt="Smith chart and eye"/><br/><sub>史密斯圆图与眼图</sub></div> |
+| <div align="center"><b>220 Root locus</b><br/><img src="assets/gallery/atlas/220_root-locus.png" width="360" alt="Root locus"/><br/><sub>根轨迹</sub></div> | <div align="center"><b>221 Pole-zero map</b><br/><img src="assets/gallery/atlas/221_pole-zero.png" width="360" alt="Pole-zero map"/><br/><sub>零极点</sub></div> |
+| <div align="center"><b>222 Step response</b><br/><img src="assets/gallery/atlas/222_step-response.png" width="360" alt="Step response"/><br/><sub>阶跃响应</sub></div> | <div align="center"><b>223 Nichols chart</b><br/><img src="assets/gallery/atlas/223_nichols.png" width="360" alt="Nichols chart"/><br/><sub>尼科尔斯图</sub></div> |
+| <div align="center"><b>224 Time waveform</b><br/><img src="assets/gallery/atlas/224_waveform.png" width="360" alt="Time waveform"/><br/><sub>时域波形</sub></div> | <div align="center"><b>225 Spectrum</b><br/><img src="assets/gallery/atlas/225_spectrum.png" width="360" alt="Spectrum"/><br/><sub>频谱</sub></div> |
+| <div align="center"><b>226 Spectrogram</b><br/><img src="assets/gallery/atlas/226_spectrogram.png" width="360" alt="Spectrogram"/><br/><sub>时频谱</sub></div> | <div align="center"><b>227 Constellation diagram</b><br/><img src="assets/gallery/atlas/227_constellation.png" width="360" alt="Constellation diagram"/><br/><sub>星座图</sub></div> |
+| <div align="center"><b>228 Wavelet scalogram</b><br/><img src="assets/gallery/atlas/228_scalogram.png" width="360" alt="Wavelet scalogram"/><br/><sub>小波尺度图</sub></div> | <div align="center"><b>229 Antenna pattern</b><br/><img src="assets/gallery/atlas/229_antenna.png" width="360" alt="Antenna pattern"/><br/><sub>天线方向图</sub></div> |
+| <div align="center"><b>230 Finite-element mesh</b><br/><img src="assets/gallery/atlas/230_fem-mesh.png" width="360" alt="Finite-element mesh"/><br/><sub>有限元网格</sub></div> | <div align="center"><b>231 Stress contour</b><br/><img src="assets/gallery/atlas/231_stress.png" width="360" alt="Stress contour"/><br/><sub>应力云图</sub></div> |
+| <div align="center"><b>232 2D streamlines</b><br/><img src="assets/gallery/atlas/232_stream-2d.png" width="360" alt="2D streamlines"/><br/><sub>二维流线</sub></div> | <div align="center"><b>233 Slice and isosurface</b><br/><img src="assets/gallery/atlas/233_isosurface.png" width="360" alt="Slice and isosurface"/><br/><sub>切片等值面</sub></div> |
+| <div align="center"><b>234 Optical path</b><br/><img src="assets/gallery/atlas/234_optics.png" width="360" alt="Optical path"/><br/><sub>光路图</sub></div> | <div align="center"><b>235 Circuit schematic</b><br/><img src="assets/gallery/atlas/235_circuit.png" width="360" alt="Circuit schematic"/><br/><sub>电路原理图</sub></div> |
+| <div align="center"><b>236 Digital timing</b><br/><img src="assets/gallery/atlas/236_wavedrom.png" width="360" alt="Digital timing"/><br/><sub>WaveDrom 时序</sub></div> | <div align="center"><b>237 Byte field</b><br/><img src="assets/gallery/atlas/237_bytefield.png" width="360" alt="Byte field"/><br/><sub>字节场</sub></div> |
+| <div align="center"><b>238 Rack elevation</b><br/><img src="assets/gallery/atlas/238_rack.png" width="360" alt="Rack elevation"/><br/><sub>机架图</sub></div> | <div align="center"><b>239 Rigid-body frame</b><br/><img src="assets/gallery/atlas/239_rigid-body.png" width="360" alt="Rigid-body frame"/><br/><sub>刚体坐标系</sub></div> |
+| <div align="center"><b>240 Poincaré section</b><br/><img src="assets/gallery/atlas/240_poincare.png" width="360" alt="Poincaré section"/><br/><sub>庞加莱截面</sub></div> | <div align="center"><b>241 Bifurcation diagram</b><br/><img src="assets/gallery/atlas/241_bifurcation.png" width="360" alt="Bifurcation diagram"/><br/><sub>分岔图</sub></div> |
+
+## Maps and space
+
+地图与空间。16 figures.
+
+| <div align="center"><b>242 Point map</b><br/><img src="assets/gallery/atlas/242_point-map.png" width="360" alt="Point map"/><br/><sub>点地图</sub></div> | <div align="center"><b>243 Choropleth</b><br/><img src="assets/gallery/atlas/243_choropleth.png" width="360" alt="Choropleth"/><br/><sub>分级统计图</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>244 Proportional symbol map</b><br/><img src="assets/gallery/atlas/244_prop-symbol.png" width="360" alt="Proportional symbol map"/><br/><sub>比例符号地图</sub></div> | <div align="center"><b>245 Flow map</b><br/><img src="assets/gallery/atlas/245_flow-map.png" width="360" alt="Flow map"/><br/><sub>流向地图</sub></div> |
+| <div align="center"><b>246 Spatial heatmap</b><br/><img src="assets/gallery/atlas/246_heat-map.png" width="360" alt="Spatial heatmap"/><br/><sub>热力地图</sub></div> | <div align="center"><b>247 Hexagon bin map</b><br/><img src="assets/gallery/atlas/247_hex-map.png" width="360" alt="Hexagon bin map"/><br/><sub>六边形聚合</sub></div> |
+| <div align="center"><b>248 Isoline map</b><br/><img src="assets/gallery/atlas/248_iso-map.png" width="360" alt="Isoline map"/><br/><sub>等值线地图</sub></div> | <div align="center"><b>249 Voronoi map</b><br/><img src="assets/gallery/atlas/249_voronoi-map.png" width="360" alt="Voronoi map"/><br/><sub>泰森多边形</sub></div> |
+| <div align="center"><b>250 Trajectory map</b><br/><img src="assets/gallery/atlas/250_trajectory-map.png" width="360" alt="Trajectory map"/><br/><sub>轨迹图</sub></div> | <div align="center"><b>251 Gridded field</b><br/><img src="assets/gallery/atlas/251_raster-grid.png" width="360" alt="Gridded field"/><br/><sub>网格场</sub></div> |
+| <div align="center"><b>252 Terrain surface</b><br/><img src="assets/gallery/atlas/252_terrain.png" width="360" alt="Terrain surface"/><br/><sub>三维地形</sub></div> | <div align="center"><b>253 Cross section</b><br/><img src="assets/gallery/atlas/253_cross-section.png" width="360" alt="Cross section"/><br/><sub>剖面</sub></div> |
+| <div align="center"><b>254 Map frame with scale</b><br/><img src="assets/gallery/atlas/254_map-frame.png" width="360" alt="Map frame with scale"/><br/><sub>指北与比例尺图框</sub></div> | <div align="center"><b>255 Small-multiple maps</b><br/><img src="assets/gallery/atlas/255_small-maps.png" width="360" alt="Small-multiple maps"/><br/><sub>小多图地图</sub></div> |
+| <div align="center"><b>256 Origin-destination links</b><br/><img src="assets/gallery/atlas/256_od-links.png" width="360" alt="Origin-destination links"/><br/><sub>起讫连接</sub></div> | <div align="center"><b>257 Admin basemap</b><br/><img src="assets/gallery/atlas/257_admin-base.png" width="360" alt="Admin basemap"/><br/><sub>行政区底图</sub></div> |
+
+## Scientific illustration
+
+科学插画与图形摘要。20 figures.
+
+| <div align="center"><b>258 Reservoir metaphor</b><br/><img src="assets/gallery/atlas/258_reservoir-valve.png" width="360" alt="Reservoir metaphor"/><br/><sub>水箱节流类比</sub></div> | <div align="center"><b>259 Code and memory inspector</b><br/><img src="assets/gallery/atlas/259_code-inspector.png" width="360" alt="Code and memory inspector"/><br/><sub>源码与内存双栏</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>260 Cell signaling cartoon</b><br/><img src="assets/gallery/atlas/260_cell-signal.png" width="360" alt="Cell signaling cartoon"/><br/><sub>细胞信号卡通</sub></div> | <div align="center"><b>261 Experimental apparatus</b><br/><img src="assets/gallery/atlas/261_apparatus.png" width="360" alt="Experimental apparatus"/><br/><sub>实验装置</sub></div> |
+| <div align="center"><b>262 Organ icon board</b><br/><img src="assets/gallery/atlas/262_organ-board.png" width="360" alt="Organ icon board"/><br/><sub>器官图标板</sub></div> | <div align="center"><b>263 Scale ladder</b><br/><img src="assets/gallery/atlas/263_scale-ladder.png" width="360" alt="Scale ladder"/><br/><sub>分子到表型尺度条</sub></div> |
+| <div align="center"><b>264 Mechanism before and after</b><br/><img src="assets/gallery/atlas/264_mechanism-pair.png" width="360" alt="Mechanism before and after"/><br/><sub>机制前后对照</sub></div> | <div align="center"><b>265 Icon timeline</b><br/><img src="assets/gallery/atlas/265_icon-timeline.png" width="360" alt="Icon timeline"/><br/><sub>图标时间线</sub></div> |
+| <div align="center"><b>266 Icon flowchart</b><br/><img src="assets/gallery/atlas/266_icon-flow.png" width="360" alt="Icon flowchart"/><br/><sub>图标流程图</sub></div> | <div align="center"><b>267 Visual comparison board</b><br/><img src="assets/gallery/atlas/267_compare-board.png" width="360" alt="Visual comparison board"/><br/><sub>对照示意表</sub></div> |
+| <div align="center"><b>268 Hypothesis model</b><br/><img src="assets/gallery/atlas/268_hypothesis.png" width="360" alt="Hypothesis model"/><br/><sub>假说模型</sub></div> | <div align="center"><b>269 Graphical abstract quad</b><br/><img src="assets/gallery/atlas/269_abstract-quad.png" width="360" alt="Graphical abstract quad"/><br/><sub>图形摘要四格</sub></div> |
+| <div align="center"><b>270 Cover composition</b><br/><img src="assets/gallery/atlas/270_cover-layout.png" width="360" alt="Cover composition"/><br/><sub>封面构图</sub></div> | <div align="center"><b>271 Human and mouse scale</b><br/><img src="assets/gallery/atlas/271_human-mouse.png" width="360" alt="Human and mouse scale"/><br/><sub>人鼠尺度</sub></div> |
+| <div align="center"><b>272 Pipetting storyboard</b><br/><img src="assets/gallery/atlas/272_pipette-board.png" width="360" alt="Pipetting storyboard"/><br/><sub>移液分镜</sub></div> | <div align="center"><b>273 Instrument panel</b><br/><img src="assets/gallery/atlas/273_instrument.png" width="360" alt="Instrument panel"/><br/><sub>仪器面板</sub></div> |
+| <div align="center"><b>274 Hazard and control legend</b><br/><img src="assets/gallery/atlas/274_hazard-legend.png" width="360" alt="Hazard and control legend"/><br/><sub>危险与对照图例</sub></div> | <div align="center"><b>275 Spring-mass metaphor</b><br/><img src="assets/gallery/atlas/275_spring-mass.png" width="360" alt="Spring-mass metaphor"/><br/><sub>弹簧质量类比</sub></div> |
+| <div align="center"><b>276 Concept to formula card</b><br/><img src="assets/gallery/atlas/276_concept-bridge.png" width="360" alt="Concept to formula card"/><br/><sub>概念到公式桥接卡</sub></div> | <div align="center"><b>277 Methods credit strip</b><br/><img src="assets/gallery/atlas/277_methods-strip.png" width="360" alt="Methods credit strip"/><br/><sub>方法致谢条</sub></div> |
+
+## Tables, code, and legends
+
+表格、代码与注释。8 figures.
+
+| <div align="center"><b>278 Three-line table</b><br/><img src="assets/gallery/atlas/278_three-line.png" width="360" alt="Three-line table"/><br/><sub>三线表</sub></div> | <div align="center"><b>279 Coefficient table</b><br/><img src="assets/gallery/atlas/279_coef-table.png" width="360" alt="Coefficient table"/><br/><sub>回归系数表</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>280 Baseline characteristics</b><br/><img src="assets/gallery/atlas/280_baseline-table.png" width="360" alt="Baseline characteristics"/><br/><sub>基线特征表</sub></div> | <div align="center"><b>281 Annotated color key</b><br/><img src="assets/gallery/atlas/281_color-key.png" width="360" alt="Annotated color key"/><br/><sub>注释色表</sub></div> |
+| <div align="center"><b>282 Numbered code block</b><br/><img src="assets/gallery/atlas/282_code-block.png" width="360" alt="Numbered code block"/><br/><sub>带行号代码块</sub></div> | <div align="center"><b>283 Pseudocode</b><br/><img src="assets/gallery/atlas/283_pseudocode.png" width="360" alt="Pseudocode"/><br/><sub>伪代码</sub></div> |
+| <div align="center"><b>284 Terminal replay</b><br/><img src="assets/gallery/atlas/284_terminal.png" width="360" alt="Terminal replay"/><br/><sub>终端回放</sub></div> | <div align="center"><b>285 Standalone colorbar</b><br/><img src="assets/gallery/atlas/285_colorbar.png" width="360" alt="Standalone colorbar"/><br/><sub>独立色标条</sub></div> |
+
+## Clinical and epidemiology
+
+医学临床与流行病。15 figures.
+
+| <div align="center"><b>286 CONSORT flow</b><br/><img src="assets/gallery/atlas/286_consort.png" width="360" alt="CONSORT flow"/><br/><sub>CONSORT 流程图</sub></div> | <div align="center"><b>287 PRISMA flow</b><br/><img src="assets/gallery/atlas/287_prisma.png" width="360" alt="PRISMA flow"/><br/><sub>PRISMA 流程图</sub></div> |
+|:---:|:---:|
+| <div align="center"><b>288 Enrollment flow</b><br/><img src="assets/gallery/atlas/288_enrollment.png" width="360" alt="Enrollment flow"/><br/><sub>入组流程</sub></div> | <div align="center"><b>289 Cohort timeline</b><br/><img src="assets/gallery/atlas/289_cohort-time.png" width="360" alt="Cohort timeline"/><br/><sub>队列时间线</sub></div> |
+| <div align="center"><b>290 Nomogram</b><br/><img src="assets/gallery/atlas/290_nomogram.png" width="360" alt="Nomogram"/><br/><sub>列线图</sub></div> | <div align="center"><b>291 Decision curve</b><br/><img src="assets/gallery/atlas/291_decision-curve.png" width="360" alt="Decision curve"/><br/><sub>决策曲线</sub></div> |
+| <div align="center"><b>292 Survival risk table</b><br/><img src="assets/gallery/atlas/292_risk-table.png" width="360" alt="Survival risk table"/><br/><sub>生存风险表</sub></div> | <div align="center"><b>293 Tumor waterfall</b><br/><img src="assets/gallery/atlas/293_tumor-waterfall.png" width="360" alt="Tumor waterfall"/><br/><sub>肿瘤瀑布图</sub></div> |
+| <div align="center"><b>294 Swimmer plot</b><br/><img src="assets/gallery/atlas/294_swimmer.png" width="360" alt="Swimmer plot"/><br/><sub>游泳图</sub></div> | <div align="center"><b>295 Spider plot</b><br/><img src="assets/gallery/atlas/295_spider.png" width="360" alt="Spider plot"/><br/><sub>蜘蛛图</sub></div> |
+| <div align="center"><b>296 Dose response</b><br/><img src="assets/gallery/atlas/296_dose-response.png" width="360" alt="Dose response"/><br/><sub>剂量反应</sub></div> | <div align="center"><b>297 Anatomy heatmap</b><br/><img src="assets/gallery/atlas/297_anatomy-heat.png" width="360" alt="Anatomy heatmap"/><br/><sub>解剖热图</sub></div> |
+| <div align="center"><b>298 Diagnostic 2×2</b><br/><img src="assets/gallery/atlas/298_diagnostic-grid.png" width="360" alt="Diagnostic 2×2"/><br/><sub>诊断四格表</sub></div> | <div align="center"><b>299 Publication-bias funnel</b><br/><img src="assets/gallery/atlas/299_bias-funnel.png" width="360" alt="Publication-bias funnel"/><br/><sub>发表偏倚漏斗</sub></div> |
+| <div align="center"><b>300 Network meta-analysis league</b><br/><img src="assets/gallery/atlas/300_league-table.png" width="360" alt="Network meta-analysis league"/><br/><sub>网状荟萃联赛表</sub></div> |   |

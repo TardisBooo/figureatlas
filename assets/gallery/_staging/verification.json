@@ -1,0 +1,25 @@
+{
+  "product": "FigureAtlas",
+  "expected": 300,
+  "rendered": 300,
+  "passed": 300,
+  "failed": 0,
+  "families": {
+    "layout": 18,
+    "compare": 28,
+    "relation": 20,
+    "time": 16,
+    "part": 14,
+    "network": 25,
+    "math": 18,
+    "ml": 20,
+    "omics": 37,
+    "chem": 17,
+    "physics": 28,
+    "geo": 16,
+    "illustration": 20,
+    "table": 8,
+    "clinical": 15
+  },
+  "failures": []
+}
