@@ -28,6 +28,8 @@
     "skills",
     "cordis.patch.yml",
     "plugin.json",
+    ".codex-plugin",
+    "SECURITY.md",
     "CATALOG.md",
     "figureatlas.py",
     "screenshots.json"
