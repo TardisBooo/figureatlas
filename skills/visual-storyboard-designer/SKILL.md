@@ -1,6 +1,6 @@
 ---
 name: visual-storyboard-designer
-description: Pick a FigureAtlas figure for a paper, slide, poster, or video frame. The catalog has 300 verified figure types across 15 families.
+description: Pick a FigureAtlas figure when a paper, slide, poster, or video frame needs a chart, diagram, map, or illustration. The catalog has 300 verified figure types across 15 families.
 ---
 
 # FigureAtlas storyboard skill

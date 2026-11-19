@@ -1,7 +1,7 @@
 {
   "name": "@tardisbooo/figureatlas",
   "version": "2.0.0",
-  "description": "300 verified scientific figure types for papers, slides, posters, and agent-made video frames.",
+  "description": "300 verified figure types for papers, slides, posters, and video frames. Agents pick a figure id and export HTML or SVG.",
   "main": "scientific_visual_studio/__init__.py",
   "author": "TardisBooo <i_chenshaobo@163.com>",
   "license": "Apache-2.0",
@@ -18,25 +18,29 @@
     "dsh-skill",
     "scientific-visualization",
     "academic-figures",
-    "manim",
-    "scienceplots",
-    "plotneuralnet",
-    "qiskit",
-    "pyvista",
-    "rdkit",
-    "smith-chart",
+    "figure-catalog",
     "agent-skill",
     "claude-code",
     "cursor",
-    "codex",
-    "remotion"
+    "codex"
+  ],
+  "files": [
+    "skills",
+    "cordis.patch.yml",
+    "plugin.json",
+    "CATALOG.md",
+    "figureatlas.py",
+    "screenshots.json"
   ],
   "engines": {
     "dsh": ">=0.1.0"
   },
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "type": "skill",
-    "category": "science",
+    "category": "skill",
     "skills": [
       "skills/visual-storyboard-designer/SKILL.md"
     ]

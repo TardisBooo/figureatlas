@@ -1,13 +1,13 @@
 ---
-description: Semantic visual storyboard designer & abstract scientific component library. Generates cyber-academic layouts, 3B1B mathematical animations, quantum Bloch circuits, Bode/Nyquist plots, and 3D deep learning topologies.
+description: Pick a FigureAtlas figure for a paper, slide, poster, or video frame. The catalog has 300 verified types.
 globs: *
 alwaysApply: false
 ---
 
-# Scientific Visual Studio Rule for Cursor & Codex
+# FigureAtlas
 
-When authoring slides, video scripts, or academic papers:
-1. Classify the pedagogical goal (Axiom Math, Quantum State, Neural Topology, Frequency Domain, Workflow DAG).
-2. Choose a cyber-academic layout (`render_cyber_academic_dashboard_layout`, `render_triptych_pipeline_layout`).
-3. Fill data props into `scientific_visual_studio` renderers.
-4. Output self-contained HTML/SVG with zero runtime C++ dependencies.
+When a paper, slide, poster, or video frame needs a figure:
+
+1. Pick the frame: journal single column, journal double column, 16:9 slide, 4:3 slide, A0 poster, or 1080p video.
+2. Pick one figure id from `CATALOG.md`. Do not invent a 301st type.
+3. Call `render_figure(id)` from `figureatlas.py`.

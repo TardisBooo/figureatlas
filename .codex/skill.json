@@ -1,8 +1,8 @@
 {
-  "id": "scientific-visual-studio",
-  "name": "Scientific Visual Studio",
-  "version": "1.1.0",
-  "description": "Scientific, AI & mathematical visual computation studio for Agents, Slides, and Video productions. 22+ procedural renderers.",
+  "id": "figureatlas",
+  "name": "FigureAtlas",
+  "version": "2.0.0",
+  "description": "Pick one of 300 verified figure types for a paper, slide, poster, or video frame.",
   "author": "TardisBooo",
   "type": "skill",
   "entrypoint": "skills/visual-storyboard-designer/SKILL.md",

@@ -1,0 +1,9 @@
+# Registers the FigureAtlas skill directory with DeepSeek Harness.
+# package.json points dsh.bundle.patch here.
+- insert:
+  - id: figureatlas-skill
+    name: '@deepseek-ai/dsh-skill-filesystem'
+    config:
+      providerName: figureatlas
+      includeDefaultRoots: false
+      bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@tardisbooo/figureatlas/package.json')), 'skills')

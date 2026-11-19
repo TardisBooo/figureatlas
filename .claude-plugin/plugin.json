@@ -1,9 +1,11 @@
 {
-  "name": "scientific-visual-studio",
-  "version": "1.2.0",
-  "description": "Scientific, AI & mathematical visual computation studio for Claude Code. Procedural renderers for academic slides, technical videos, and research papers.",
-  "author": "TardisBooo",
-  "repository": "https://github.com/TardisBooo/scientific-visual-studio",
+  "name": "figureatlas",
+  "version": "2.0.0",
+  "description": "Pick one of 300 verified figure types for a paper, slide, poster, or video frame.",
+  "author": {
+    "name": "TardisBooo"
+  },
+  "repository": "https://github.com/TardisBooo/figureatlas",
   "skills": [
     "skills/visual-storyboard-designer/SKILL.md"
   ]
